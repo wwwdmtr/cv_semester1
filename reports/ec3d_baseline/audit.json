@@ -1,0 +1,39 @@
+{
+  "source_url": "https://raw.githubusercontent.com/Jacoo-Zhao/3D-Pose-Based-Feedback-For-Physical-Exercises/1c8d28ddc8a346634f9c86335e3a261f90d6b9b2/data/EC3D/data_3D.pickle",
+  "source_commit": "1c8d28ddc8a346634f9c86335e3a261f90d6b9b2",
+  "sha256": "a05c8b4f55f2f43637d2d6cbf40722807ea780f47e84090470bd100c927ebbdf",
+  "total_frames": 29789,
+  "total_sequences": 371,
+  "by_action": {
+    "Lunges": 127,
+    "Plank": 103,
+    "SQUAT": 141
+  },
+  "selected_squat_sequences": 132,
+  "selected_by_instruction": {
+    "1": 41,
+    "2": 23,
+    "3": 23,
+    "4": 21,
+    "5": 24
+  },
+  "selected_by_subject": {
+    "Hugues": 31,
+    "Isinsu": 38,
+    "Sena": 32,
+    "Vidit": 31
+  },
+  "excluded_squat_ids": [
+    "SQUAT_Sena_10_1",
+    "SQUAT_Sena_10_2",
+    "SQUAT_Sena_10_3",
+    "SQUAT_Sena_10_4",
+    "SQUAT_Sena_10_5",
+    "SQUAT_Sena_10_6",
+    "SQUAT_Sena_10_7",
+    "SQUAT_Sena_10_8",
+    "SQUAT_Sena_10_9"
+  ],
+  "all_coordinates_finite": true,
+  "note": "Метка 10 не описана в таблице 1 статьи и исключена до выяснения её смысла."
+}

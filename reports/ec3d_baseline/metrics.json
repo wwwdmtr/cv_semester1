@@ -1,0 +1,604 @@
+{
+  "protocol": "4 outer folds; 2 train / 1 validation / 1 test subjects; C fixed at 1",
+  "folds": [
+    {
+      "task": "binary",
+      "model": "dummy",
+      "test_subject": "Hugues",
+      "n_test": 31,
+      "macro_f1": 0.40384615384615385,
+      "accuracy": 0.6774193548387096,
+      "fit_seconds": 0.00018487499619368464,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 1.0,
+      "test_coverage": 1.0,
+      "accepted_error_rate": 0.3225806451612903,
+      "false_feedback_rate": 1.0
+    },
+    {
+      "task": "binary",
+      "model": "dummy",
+      "test_subject": "Isinsu",
+      "n_test": 38,
+      "macro_f1": 0.42424242424242425,
+      "accuracy": 0.7368421052631579,
+      "fit_seconds": 7.095899491105229e-05,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 1.0,
+      "test_coverage": 1.0,
+      "accepted_error_rate": 0.2631578947368421,
+      "false_feedback_rate": 1.0
+    },
+    {
+      "task": "binary",
+      "model": "dummy",
+      "test_subject": "Sena",
+      "n_test": 32,
+      "macro_f1": 0.39622641509433965,
+      "accuracy": 0.65625,
+      "fit_seconds": 6.612500874325633e-05,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 1.0,
+      "test_coverage": 1.0,
+      "accepted_error_rate": 0.34375,
+      "false_feedback_rate": 1.0
+    },
+    {
+      "task": "binary",
+      "model": "dummy",
+      "test_subject": "Vidit",
+      "n_test": 31,
+      "macro_f1": 0.40384615384615385,
+      "accuracy": 0.6774193548387096,
+      "fit_seconds": 6.395899981725961e-05,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 1.0,
+      "test_coverage": 1.0,
+      "accepted_error_rate": 0.3225806451612903,
+      "false_feedback_rate": 1.0
+    },
+    {
+      "task": "binary",
+      "model": "geometry_logreg",
+      "test_subject": "Hugues",
+      "n_test": 31,
+      "macro_f1": 0.9639953542392566,
+      "accuracy": 0.967741935483871,
+      "fit_seconds": 0.01672183298796881,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.673147002603221,
+      "test_coverage": 0.9354838709677419,
+      "accepted_error_rate": 0.0,
+      "false_feedback_rate": 0.0
+    },
+    {
+      "task": "binary",
+      "model": "geometry_logreg",
+      "test_subject": "Isinsu",
+      "n_test": 38,
+      "macro_f1": 0.9649122807017543,
+      "accuracy": 0.9736842105263158,
+      "fit_seconds": 0.0014751250128028914,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.9891383457765529,
+      "test_coverage": 0.3157894736842105,
+      "accepted_error_rate": 0.0,
+      "false_feedback_rate": 0.1
+    },
+    {
+      "task": "binary",
+      "model": "geometry_logreg",
+      "test_subject": "Sena",
+      "n_test": 32,
+      "macro_f1": 0.39622641509433965,
+      "accuracy": 0.65625,
+      "fit_seconds": 0.001275709000765346,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.9912203104649379,
+      "test_coverage": 0.96875,
+      "accepted_error_rate": 0.3548387096774194,
+      "false_feedback_rate": 1.0
+    },
+    {
+      "task": "binary",
+      "model": "geometry_logreg",
+      "test_subject": "Vidit",
+      "n_test": 31,
+      "macro_f1": 0.8199767711962833,
+      "accuracy": 0.8387096774193549,
+      "fit_seconds": 0.0016416669968748465,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.6589655912536592,
+      "test_coverage": 0.967741935483871,
+      "accepted_error_rate": 0.13333333333333333,
+      "false_feedback_rate": 0.2
+    },
+    {
+      "task": "binary",
+      "model": "resampled_logreg",
+      "test_subject": "Hugues",
+      "n_test": 31,
+      "macro_f1": 1.0,
+      "accuracy": 1.0,
+      "fit_seconds": 0.009768999996595085,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.6313641449516031,
+      "test_coverage": 1.0,
+      "accepted_error_rate": 0.0,
+      "false_feedback_rate": 0.0
+    },
+    {
+      "task": "binary",
+      "model": "resampled_logreg",
+      "test_subject": "Isinsu",
+      "n_test": 38,
+      "macro_f1": 0.44390243902439025,
+      "accuracy": 0.4473684210526316,
+      "fit_seconds": 0.037467750007635914,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.9998841530282275,
+      "test_coverage": 0.18421052631578946,
+      "accepted_error_rate": 0.0,
+      "false_feedback_rate": 0.0
+    },
+    {
+      "task": "binary",
+      "model": "resampled_logreg",
+      "test_subject": "Sena",
+      "n_test": 32,
+      "macro_f1": 0.5428571428571429,
+      "accuracy": 0.6875,
+      "fit_seconds": 0.013871500006644055,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.9302610408355874,
+      "test_coverage": 0.53125,
+      "accepted_error_rate": 0.11764705882352941,
+      "false_feedback_rate": 0.8181818181818182
+    },
+    {
+      "task": "binary",
+      "model": "resampled_logreg",
+      "test_subject": "Vidit",
+      "n_test": 31,
+      "macro_f1": 0.5026737967914439,
+      "accuracy": 0.7096774193548387,
+      "fit_seconds": 0.008104124994133599,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.990653135130697,
+      "test_coverage": 0.6774193548387096,
+      "accepted_error_rate": 0.19047619047619047,
+      "false_feedback_rate": 0.9
+    },
+    {
+      "task": "instruction",
+      "model": "dummy",
+      "test_subject": "Hugues",
+      "n_test": 31,
+      "macro_f1": 0.0975609756097561,
+      "accuracy": 0.3225806451612903,
+      "fit_seconds": 7.362500764429569e-05,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 1.0,
+      "test_coverage": 1.0,
+      "accepted_error_rate": 0.6774193548387096,
+      "false_feedback_rate": 0.0
+    },
+    {
+      "task": "instruction",
+      "model": "dummy",
+      "test_subject": "Isinsu",
+      "n_test": 38,
+      "macro_f1": 0.08333333333333334,
+      "accuracy": 0.2631578947368421,
+      "fit_seconds": 6.50409929221496e-05,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 1.0,
+      "test_coverage": 1.0,
+      "accepted_error_rate": 0.7368421052631579,
+      "false_feedback_rate": 0.0
+    },
+    {
+      "task": "instruction",
+      "model": "dummy",
+      "test_subject": "Sena",
+      "n_test": 32,
+      "macro_f1": 0.10232558139534884,
+      "accuracy": 0.34375,
+      "fit_seconds": 6.400000711437315e-05,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 1.0,
+      "test_coverage": 1.0,
+      "accepted_error_rate": 0.65625,
+      "false_feedback_rate": 0.0
+    },
+    {
+      "task": "instruction",
+      "model": "dummy",
+      "test_subject": "Vidit",
+      "n_test": 31,
+      "macro_f1": 0.0975609756097561,
+      "accuracy": 0.3225806451612903,
+      "fit_seconds": 6.091699469834566e-05,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 1.0,
+      "test_coverage": 1.0,
+      "accepted_error_rate": 0.6774193548387096,
+      "false_feedback_rate": 0.0
+    },
+    {
+      "task": "instruction",
+      "model": "geometry_logreg",
+      "test_subject": "Hugues",
+      "n_test": 31,
+      "macro_f1": 0.5833333333333334,
+      "accuracy": 0.5806451612903226,
+      "fit_seconds": 0.004915333003737032,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.660560640970819,
+      "test_coverage": 0.8064516129032258,
+      "accepted_error_rate": 0.44,
+      "false_feedback_rate": 1.0
+    },
+    {
+      "task": "instruction",
+      "model": "geometry_logreg",
+      "test_subject": "Isinsu",
+      "n_test": 38,
+      "macro_f1": 0.5991428571428571,
+      "accuracy": 0.6842105263157895,
+      "fit_seconds": 0.0021355419885367155,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.8981335227985758,
+      "test_coverage": 0.6842105263157895,
+      "accepted_error_rate": 0.19230769230769232,
+      "false_feedback_rate": 0.1
+    },
+    {
+      "task": "instruction",
+      "model": "geometry_logreg",
+      "test_subject": "Sena",
+      "n_test": 32,
+      "macro_f1": 0.6327985739750446,
+      "accuracy": 0.625,
+      "fit_seconds": 0.002471125000738539,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.6078029039326356,
+      "test_coverage": 0.71875,
+      "accepted_error_rate": 0.21739130434782608,
+      "false_feedback_rate": 1.0
+    },
+    {
+      "task": "instruction",
+      "model": "geometry_logreg",
+      "test_subject": "Vidit",
+      "n_test": 31,
+      "macro_f1": 0.6741075917546506,
+      "accuracy": 0.7741935483870968,
+      "fit_seconds": 0.0025486669910605997,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.6915122037952379,
+      "test_coverage": 0.5806451612903226,
+      "accepted_error_rate": 0.05555555555555555,
+      "false_feedback_rate": 0.3
+    },
+    {
+      "task": "instruction",
+      "model": "resampled_logreg",
+      "test_subject": "Hugues",
+      "n_test": 31,
+      "macro_f1": 0.5737509549274256,
+      "accuracy": 0.6774193548387096,
+      "fit_seconds": 0.02566629200009629,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.7372811910599268,
+      "test_coverage": 0.7096774193548387,
+      "accepted_error_rate": 0.13636363636363635,
+      "false_feedback_rate": 0.0
+    },
+    {
+      "task": "instruction",
+      "model": "resampled_logreg",
+      "test_subject": "Isinsu",
+      "n_test": 38,
+      "macro_f1": 0.24444444444444446,
+      "accuracy": 0.42105263157894735,
+      "fit_seconds": 0.0215230409958167,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.8243854829003461,
+      "test_coverage": 0.7894736842105263,
+      "accepted_error_rate": 0.5333333333333333,
+      "false_feedback_rate": 0.0
+    },
+    {
+      "task": "instruction",
+      "model": "resampled_logreg",
+      "test_subject": "Sena",
+      "n_test": 32,
+      "macro_f1": 0.6259175607001695,
+      "accuracy": 0.5625,
+      "fit_seconds": 0.025146458006929606,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.6098224323545604,
+      "test_coverage": 0.71875,
+      "accepted_error_rate": 0.4782608695652174,
+      "false_feedback_rate": 0.8181818181818182
+    },
+    {
+      "task": "instruction",
+      "model": "resampled_logreg",
+      "test_subject": "Vidit",
+      "n_test": 31,
+      "macro_f1": 0.28484848484848485,
+      "accuracy": 0.3870967741935484,
+      "fit_seconds": 0.023681332997512072,
+      "val_target_coverage": 0.8,
+      "confidence_threshold": 0.7629766752111692,
+      "test_coverage": 0.967741935483871,
+      "accepted_error_rate": 0.6,
+      "false_feedback_rate": 1.0
+    }
+  ],
+  "summary": [
+    {
+      "task": "binary",
+      "model": "dummy",
+      "fold_macro_f1_mean": 0.4070402867572679,
+      "fold_macro_f1_std": 0.010407429131493376,
+      "pooled_macro_f1": 0.4080717488789238,
+      "pooled_accuracy": 0.6893939393939394,
+      "per_class_f1": [
+        0.0,
+        0.8161434977578476
+      ],
+      "false_feedback_rate": 1.0,
+      "labels": [
+        0,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          41
+        ],
+        [
+          0,
+          91
+        ]
+      ]
+    },
+    {
+      "task": "binary",
+      "model": "geometry_logreg",
+      "fold_macro_f1_mean": 0.7862777053079085,
+      "fold_macro_f1_std": 0.23279256340508614,
+      "pooled_macro_f1": 0.828125,
+      "pooled_accuracy": 0.8636363636363636,
+      "per_class_f1": [
+        0.75,
+        0.90625
+      ],
+      "false_feedback_rate": 0.34146341463414637,
+      "labels": [
+        0,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          27,
+          14
+        ],
+        [
+          4,
+          87
+        ]
+      ]
+    },
+    {
+      "task": "binary",
+      "model": "resampled_logreg",
+      "fold_macro_f1_mean": 0.6223583446682442,
+      "fold_macro_f1_std": 0.22085321040838432,
+      "pooled_macro_f1": 0.6550823099033185,
+      "pooled_accuracy": 0.696969696969697,
+      "per_class_f1": [
+        0.5348837209302325,
+        0.7752808988764045
+      ],
+      "false_feedback_rate": 0.43902439024390244,
+      "labels": [
+        0,
+        1
+      ],
+      "confusion_matrix": [
+        [
+          23,
+          18
+        ],
+        [
+          22,
+          69
+        ]
+      ]
+    },
+    {
+      "task": "instruction",
+      "model": "dummy",
+      "fold_macro_f1_mean": 0.0951952164870486,
+      "fold_macro_f1_std": 0.0071193399998044195,
+      "pooled_macro_f1": 0.09479768786127167,
+      "pooled_accuracy": 0.3106060606060606,
+      "per_class_f1": [
+        0.47398843930635837,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "false_feedback_rate": 0.0,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "confusion_matrix": [
+        [
+          41,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          23,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          23,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          21,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          24,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "task": "instruction",
+      "model": "geometry_logreg",
+      "fold_macro_f1_mean": 0.6223455890514714,
+      "fold_macro_f1_std": 0.03481699542571416,
+      "pooled_macro_f1": 0.6839498432601882,
+      "pooled_accuracy": 0.6666666666666666,
+      "per_class_f1": [
+        0.5517241379310345,
+        0.9545454545454546,
+        0.7272727272727273,
+        0.5862068965517241,
+        0.6
+      ],
+      "false_feedback_rate": 0.6097560975609756,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "confusion_matrix": [
+        [
+          16,
+          0,
+          1,
+          7,
+          17
+        ],
+        [
+          0,
+          21,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          16,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          17,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          18
+        ]
+      ]
+    },
+    {
+      "task": "instruction",
+      "model": "resampled_logreg",
+      "fold_macro_f1_mean": 0.4322403612301311,
+      "fold_macro_f1_std": 0.16920976427780166,
+      "pooled_macro_f1": 0.4753366353079409,
+      "pooled_accuracy": 0.5075757575757576,
+      "per_class_f1": [
+        0.5365853658536586,
+        0.6060606060606061,
+        0.23076923076923078,
+        0.39215686274509803,
+        0.6111111111111112
+      ],
+      "false_feedback_rate": 0.4634146341463415,
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "confusion_matrix": [
+        [
+          22,
+          0,
+          0,
+          9,
+          10
+        ],
+        [
+          5,
+          10,
+          0,
+          5,
+          3
+        ],
+        [
+          8,
+          0,
+          3,
+          5,
+          7
+        ],
+        [
+          5,
+          0,
+          0,
+          10,
+          6
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          22
+        ]
+      ]
+    }
+  ]
+}
