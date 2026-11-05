@@ -11,7 +11,9 @@ import pickle
 import time
 
 os.environ.setdefault("MPLCONFIGDIR", str(Path(".mplconfig").resolve()))
+import joblib
 import numpy as np
+import sklearn
 from sklearn.dummy import DummyClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
@@ -129,7 +131,72 @@ def write_json(path, obj):
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def run(data_path, out):
+def make_classifier(name):
+    if name == "dummy":
+        return DummyClassifier(strategy="most_frequent")
+    return make_pipeline(
+        StandardScaler(), LogisticRegression(C=1., class_weight="balanced", max_iter=3000)
+    )
+
+
+def save_model(path, pipeline, name, task, training_sequences, threshold=None, fold=None):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    bundle = {
+        "format_version": 1,
+        "pipeline": pipeline,
+        "feature_kind": "resampled" if name == "resampled_logreg" else "geometry",
+        "feature_version": 1,
+        "task": task,
+        "classes": pipeline.classes_.tolist(),
+        "correct_class": 0 if task == "binary" else 1,
+        "confidence_threshold": threshold,
+        "input_format": "EC3D BODY_25; shape (frames, 25, 3); prepared 3D coordinates",
+        "training_sequence_ids": [s["id"] for s in training_sequences],
+        "training_subjects": sorted({s["subject"] for s in training_sequences}),
+        "scope": "evaluation_fold" if fold is not None else "refit_all_data",
+        "fold": fold,
+        "data_sha256": SHA256,
+        "source_commit": COMMIT,
+        "versions": {"numpy": np.__version__, "scikit-learn": sklearn.__version__, "joblib": joblib.__version__},
+    }
+    joblib.dump(bundle, path, compress=3)
+    # Сверяем восстановление параметров сразу после записи; без повторного fit.
+    restored = joblib.load(path)
+    extractor = resampled_features if bundle["feature_kind"] == "resampled" else geometric_features
+    probe = np.stack([extractor(s["poses"]) for s in training_sequences])
+    np.testing.assert_array_equal(pipeline.predict(probe), restored["pipeline"].predict(probe))
+    np.testing.assert_allclose(pipeline.predict_proba(probe), restored["pipeline"].predict_proba(probe), rtol=0, atol=0)
+
+
+def predict_saved_model(model_path, poses):
+    bundle = joblib.load(model_path)
+    if bundle.get("format_version") != 1 or bundle.get("feature_version") != 1:
+        raise ValueError("Неподдерживаемая версия модели или признаков")
+    poses = np.asarray(poses, dtype=float)
+    if poses.ndim != 3 or poses.shape[0] < 2 or poses.shape[1:] != (25, 3):
+        raise ValueError("Нужен массив 3D-поз EC3D формы (кадры, 25, 3), минимум два кадра")
+    if not np.isfinite(poses).all():
+        raise ValueError("В позе есть пропуски/NaN: эта версия их ещё не обрабатывает")
+    extractors = {"geometry": geometric_features, "resampled": resampled_features}
+    if bundle["feature_kind"] not in extractors:
+        raise ValueError("Неизвестный способ извлечения признаков")
+    features = extractors[bundle["feature_kind"]](poses)[None]
+    pipeline = bundle["pipeline"]
+    prediction = int(pipeline.predict(features)[0])
+    confidence = float(pipeline.predict_proba(features).max())
+    threshold = bundle["confidence_threshold"]
+    return {
+        "task": bundle["task"], "predicted_class": prediction,
+        "confidence": confidence,
+        "accepted": bool(confidence >= threshold) if threshold is not None else None,
+        "scope": bundle["scope"],
+        "note": "Для модели на всех данных порог отказа не настроен." if threshold is None else "Порог настроен на validation этого разбиения.",
+    }
+
+
+def run(data_path, out, models_dir=Path("models/ec3d_baseline")):
+    from experiment_log import require_empty_outputs
+    require_empty_outputs(out, models_dir)
     out.mkdir(parents=True, exist_ok=True)
     all_sequences, n_frames = load_sequences(data_path)
     sequences = select_squats(all_sequences)
@@ -168,9 +235,7 @@ def run(data_path, out):
                 train, val, test = (np.array(fold[k]) for k in ("train", "val", "test"))
                 if set(y[train]) != set(classes):
                     raise ValueError("В обучении отсутствует один из целевых классов")
-                model = DummyClassifier(strategy="most_frequent") if name == "dummy" else make_pipeline(
-                    StandardScaler(), LogisticRegression(C=1., class_weight="balanced", max_iter=3000)
-                )
+                model = make_classifier(name)
                 start = time.perf_counter()
                 model.fit(x[train], y[train])
                 elapsed = time.perf_counter() - start
@@ -179,6 +244,11 @@ def run(data_path, out):
                 # Порог выбран только по validation, фактическое покрытие test может отличаться.
                 threshold = float(np.quantile(model.predict_proba(x[val]).max(axis=1), .2))
                 accepted = confidence >= threshold
+                save_model(
+                    models_dir / "folds" / f"{task}_{name}_heldout_{fold['test_subject']}.joblib",
+                    model, name, task, [sequences[i] for i in train], threshold,
+                    {k: fold[k] for k in ("train_subjects", "val_subject", "test_subject")},
+                )
                 records.append({
                     "task": task, "model": name, "test_subject": fold["test_subject"],
                     "n_test": len(test), "macro_f1": float(f1_score(y[test], pred, labels=classes, average="macro", zero_division=0)),
@@ -208,6 +278,12 @@ def run(data_path, out):
                 "false_feedback_rate": false_feedback_rate(np.array(all_true), np.array(all_pred), task),
                 "labels": classes, "confusion_matrix": confusion_matrix(all_true, all_pred, labels=classes).tolist(),
             })
+        # Отдельная модель для дальнейшего использования: обучена на всех 132 примерах.
+        # Метрики выше относятся к разбиениям; эту версию независимо не оценивали.
+        final_model = make_classifier("geometry_logreg")
+        final_model.fit(features["geometry_logreg"], y)
+        filename = "squat_binary.joblib" if task == "binary" else "squat_geometry.joblib"
+        save_model(models_dir / filename, final_model, "geometry_logreg", task, sequences)
     write_json(out / "metrics.json", {"protocol": "4 outer folds; 2 train / 1 validation / 1 test subjects; C fixed at 1", "folds": records, "summary": summaries})
     with (out / "predictions.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(predictions[0]))
@@ -217,6 +293,7 @@ def run(data_path, out):
     for row in summaries:
         print(f"{row['task']:12} {row['model']:20} macro-F1={row['fold_macro_f1_mean']:.3f} ± {row['fold_macro_f1_std']:.3f}")
     print(f"Проверено {len(sequences)} приседаний. Отчёты: {out}")
+    print(f"Модели сохранены и проверены повторной загрузкой: {models_dir}")
 
 
 def false_feedback_rate(y_true, y_pred, task):
@@ -245,9 +322,20 @@ def plot_confusions(summaries, out):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data", type=Path, default=Path("data/raw/ec3d/data_3D.pickle"))
-    parser.add_argument("--output", type=Path, default=Path("reports/ec3d_baseline"))
+    parser.add_argument("--output", type=Path, help="Новый пустой каталог отчётов")
+    parser.add_argument("--models-dir", type=Path, help="Новый пустой каталог моделей")
+    parser.add_argument("--label", default="ec3d_baseline")
+    parser.add_argument("--hypothesis", default="Исходное сравнение геометрии и координат EC3D")
+    parser.add_argument("--note", default="")
+    parser.add_argument("--parent-run")
     args = parser.parse_args()
-    run(args.data, args.output)
+    from experiment_log import Experiment
+    experiment = Experiment(args.label, "EC3D", hypothesis=args.hypothesis, note=args.note,
+                            parent_run=args.parent_run, output=args.output, models_dir=args.models_dir)
+    with experiment.capture():
+        print(f"Журнал запуска: {experiment.directory}")
+        run(args.data, experiment.report_dir, experiment.models_dir)
+    print(f"Результаты и настройки сохранены: {experiment.directory}")
 
 
 if __name__ == "__main__":

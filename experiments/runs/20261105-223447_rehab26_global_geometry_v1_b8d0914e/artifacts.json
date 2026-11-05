@@ -1,0 +1,434 @@
+[
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/README.md",
+    "bytes": 13027,
+    "sha256": "e7336abe8ece834570e3a8582b67b929d5da74ff0ec832b7487319a67df9ba3f"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/confusion_matrix.png",
+    "bytes": 60491,
+    "sha256": "f9f61843f4e97024165c1192304fda79fc66f173d8134be3ca6b57cc39fe75f5"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/data_audit.json",
+    "bytes": 35184,
+    "sha256": "fd53f2a833a1953454228a406e3be80564275b307d0add3c8c88fedc0b7cc0ef"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/feature_failures.json",
+    "bytes": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/feature_metadata.json",
+    "bytes": 1958,
+    "sha256": "330311299bc899fb2411c4e06e9530f3db50f71bcc2947dc4b6a04cddadc5f51"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/final_training_selection.json",
+    "bytes": 190593,
+    "sha256": "37dd5bbeeb29b1e2451a0417b1acb0f22ddb65218e6ce7c6c4ecc843f602de93"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/fold_predictions.csv",
+    "bytes": 1554293,
+    "sha256": "94391a1e49e973fa3d4a62226fd728e8e2f7e7e5846967b4163f68f26eb8d79a"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/group_metrics.json",
+    "bytes": 266686,
+    "sha256": "663ef13df4788ef5fcca481cd4c69a7823c2ee20deeb1271ebb400a4c9dba366"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/inner_search.json",
+    "bytes": 829280,
+    "sha256": "36b433a5ee946b37320654fc310a9d38e4a43ad4e9ebc94cbdb36de42409122d"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/manifest.csv",
+    "bytes": 78301,
+    "sha256": "11a2667234bb9be7e9ad3a2cd022507d31fcb629a0246f61d3889b20909aa913"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/metrics.json",
+    "bytes": 76299,
+    "sha256": "7202d86611b1d536d3247785bd5b5633332ebc4282d6f69af344e3ff4281a1b4"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/outer_fold_metrics.json",
+    "bytes": 53224,
+    "sha256": "2249d519f409a1c93033c88f55bf6599fe323a64eefe2e4f3791e2b7e42c197b"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/people_metrics.png",
+    "bytes": 41259,
+    "sha256": "8f236364367ff5c36041e00a8708b5db51f2d805d53b0c040ba81847c4c3a5e6"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/pose_galleries/Honza.png",
+    "bytes": 243474,
+    "sha256": "5fddbd8ab43ce0b0a8f5e7485e188d44dea3cb57161b579f311184edc6cf0acb"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/pose_galleries/Mima.png",
+    "bytes": 252459,
+    "sha256": "081c7854b5a79a74ac57d767912d43ca70bc8d9c9f82fb37d72e30a6fa724321"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/pose_galleries/Petra.png",
+    "bytes": 250142,
+    "sha256": "f568605f7d45300d27715e31b768980b3d5c3408ff3257787c72892420fe95a1"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/pose_galleries/Terka.png",
+    "bytes": 247249,
+    "sha256": "14c7f080f4659904686b1a086c286e0f9a89d5c33bd9a41978142ff797301008"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/pose_galleries/Vasil.png",
+    "bytes": 244893,
+    "sha256": "0b6e5d7281f69a787bb2f4b03b31fee307f47cf8478ab302501c4251f51216de"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/run_config.json",
+    "bytes": 46143,
+    "sha256": "a893ed8df1e88771b76387f9e6d80b4b3fecccb90a98799dbd05c47f033c5c82"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/runtime.json",
+    "bytes": 143,
+    "sha256": "6dbf6582c484e9ed4f120bf69aa209823d5e4de2dea589aed8635eefc56ecab1"
+  },
+  {
+    "group": "reports",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/reports/splits.json",
+    "bytes": 57944,
+    "sha256": "ba35252419c775ec6dce88b58e8fd302ccfb3d35173ebf9a6401a14e0a7a421a"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/dummy_heldout_Honza.joblib",
+    "bytes": 9938,
+    "sha256": "7541d82727cbb493df0d851bb4adc6677defe2c1bde6279c75803742e0c56e0a"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/dummy_heldout_Mima.joblib",
+    "bytes": 9970,
+    "sha256": "b4271921ef745969cb8543b50e6d10a97af788204cb06007c0e83ad60644f45f"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/dummy_heldout_Petra.joblib",
+    "bytes": 9924,
+    "sha256": "7bf321cf5c07a68a2f7f862c84985227c20836827c6cd32604985da0f50e3d30"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/dummy_heldout_Terka.joblib",
+    "bytes": 9953,
+    "sha256": "7adbe6caa937f367f00280715f217f47ffa252ab4e8dddcd76c9d59c8ea43f7a"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/dummy_heldout_Vasil.joblib",
+    "bytes": 9928,
+    "sha256": "9f9dbb5f9ebb7ae5746e667d9c5f6cb21041379182cb5594ca7858392e5168da"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/extra_trees_tuned_heldout_Honza.joblib",
+    "bytes": 1592358,
+    "sha256": "213f367f254b220b29f667736dd04203bfe71c92ea6a9b4adfe36536078fed21"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/extra_trees_tuned_heldout_Mima.joblib",
+    "bytes": 970438,
+    "sha256": "68034e60127d43129867e5086736caf5a191d7cd3f5c69b68769a99d6da45d83"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/extra_trees_tuned_heldout_Petra.joblib",
+    "bytes": 987417,
+    "sha256": "fc8465c350e480cee8709636e7ad3244ceb97bf0a87c6ccfece95eb8f245db57"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/extra_trees_tuned_heldout_Terka.joblib",
+    "bytes": 1510039,
+    "sha256": "64fc1d8118d14ba85d001cbb96f0998ed40c20bd4bccd95b04cdecc70ed74725"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/extra_trees_tuned_heldout_Vasil.joblib",
+    "bytes": 965882,
+    "sha256": "95cb9d226a6313d399135c5dbca55d36cb2305b7eb2394bb692cb6f6be9ef19f"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/inner_selected_heldout_Honza.joblib",
+    "bytes": 11058,
+    "sha256": "b48f78da44af4ab7e327538e17a75699ba7e2c24b421cb1babc3509055cba039"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/inner_selected_heldout_Mima.joblib",
+    "bytes": 11121,
+    "sha256": "40bb433e1b58f2190cc4426e7be9c95b944ccd51013c5fa3bd8de84d00347d1a"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/inner_selected_heldout_Petra.joblib",
+    "bytes": 11079,
+    "sha256": "d4c11534a31f617239b01e7f0cbdb87cd579a157d2489abf197e2a19b4717a28"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/inner_selected_heldout_Terka.joblib",
+    "bytes": 11104,
+    "sha256": "596539247895cc7abc8e23671328efce57c3c22bf3a77d21ebedc8fc745e7f86"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/inner_selected_heldout_Vasil.joblib",
+    "bytes": 11048,
+    "sha256": "d462e3d5cd2143ad8ecbb5ccd3a253a00a4c9752308192ac5a6f56bec002bc8a"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_fixed_heldout_Honza.joblib",
+    "bytes": 11090,
+    "sha256": "1acd89acb52c2f42da0ecd2dac7e0f7826b1cbfaeb95e0906a0b920b0329c25f"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_fixed_heldout_Mima.joblib",
+    "bytes": 11125,
+    "sha256": "30bfe6ba3195a83f89cddfce67bf3dcb00fa0ce019769cf63e92ddc6e160a40e"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_fixed_heldout_Petra.joblib",
+    "bytes": 11079,
+    "sha256": "d4c11534a31f617239b01e7f0cbdb87cd579a157d2489abf197e2a19b4717a28"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_fixed_heldout_Terka.joblib",
+    "bytes": 11095,
+    "sha256": "49c78b6c85a62210bdf20dde459bfe6d2ac30ee5fc30378fa5222d7d5fbe7fcc"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_fixed_heldout_Vasil.joblib",
+    "bytes": 11080,
+    "sha256": "335ae03198ee4c9b9fa9c7601f2e2830de86a3f91e6b6255398fce0555cb22bc"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_tuned_heldout_Honza.joblib",
+    "bytes": 11058,
+    "sha256": "b48f78da44af4ab7e327538e17a75699ba7e2c24b421cb1babc3509055cba039"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_tuned_heldout_Mima.joblib",
+    "bytes": 11121,
+    "sha256": "40bb433e1b58f2190cc4426e7be9c95b944ccd51013c5fa3bd8de84d00347d1a"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_tuned_heldout_Petra.joblib",
+    "bytes": 11079,
+    "sha256": "d4c11534a31f617239b01e7f0cbdb87cd579a157d2489abf197e2a19b4717a28"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_tuned_heldout_Terka.joblib",
+    "bytes": 11104,
+    "sha256": "596539247895cc7abc8e23671328efce57c3c22bf3a77d21ebedc8fc745e7f86"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/logreg_tuned_heldout_Vasil.joblib",
+    "bytes": 11048,
+    "sha256": "d462e3d5cd2143ad8ecbb5ccd3a253a00a4c9752308192ac5a6f56bec002bc8a"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/svm_tuned_heldout_Honza.joblib",
+    "bytes": 106382,
+    "sha256": "5052a41069d3bdf578818fff44b194b86b119281f9a2766dd986366cb5359648"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/svm_tuned_heldout_Mima.joblib",
+    "bytes": 135534,
+    "sha256": "784267c0e83046171b9cbd7229f00d43f92e2bd570515410c2f20c8850f20e71"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/svm_tuned_heldout_Petra.joblib",
+    "bytes": 137521,
+    "sha256": "2b3f44102bbe1dd55cde0f48cff0b030fe68608d333183791ac5d54a6588db43"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/svm_tuned_heldout_Terka.joblib",
+    "bytes": 127530,
+    "sha256": "122ac04373b751609c63cd60363d4a5d75883823915054fa9e11fbdb109871aa"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/folds/svm_tuned_heldout_Vasil.joblib",
+    "bytes": 106508,
+    "sha256": "1a605c93f9178a9dbf663692439c619c96b8df225e09cb0b3077d42727d4239e"
+  },
+  {
+    "group": "models",
+    "path": "models/experiments/20261105-223447_rehab26_global_geometry_v1_b8d0914e/squat_geometry.joblib",
+    "bytes": 11717,
+    "sha256": "9c534ac51190cea40d52ad1af321788221d6c5216abe291f69cba67b189f5f67"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/docs/experiment-protocol.md",
+    "bytes": 35238,
+    "sha256": "0f497bb8931b0d01f023d9df5cf1d61dd4e6b6ee1d88b4cd1b33be2f1ca94524"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/requirements.txt",
+    "bytes": 80,
+    "sha256": "7219e6bcec60e899ce63733ceff5d9afdb1fe60a1a134c9c8df8e23c0372c7ce"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/audit_rehab26.py",
+    "bytes": 6354,
+    "sha256": "8a9ac535e27211cb1298602165d40f462db525931aebbeded38557f29310b97a"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/download_ec3d.py",
+    "bytes": 1559,
+    "sha256": "df4fe5fcbd739d1d57636af8bf9578f841d0fe65ed3c6b41d54c8a043421752c"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/download_rehab26.py",
+    "bytes": 11384,
+    "sha256": "4218758305272e537ca0b7a4e81f46588f9ada04fed6c72ea782549f407c1c10"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/ec3d_baseline.py",
+    "bytes": 17444,
+    "sha256": "9f62aa2bc6d0f0f4baf7ca42cbd29c87f94ae7f53a6fb86175441c6964cd2609"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/experiment_log.py",
+    "bytes": 15013,
+    "sha256": "d37b69da04b0875e33153e7ebf9e7ea3673482272ed027d2688ab1c033d3b3bf"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/predict_rehab26.py",
+    "bytes": 2613,
+    "sha256": "b0427ccd5cf0fb0aad0980d9f813823621753de9d107b396eb657a434c3a7b69"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/predict_squat.py",
+    "bytes": 746,
+    "sha256": "72787adea68641f5c2a169816f1e91c0fd43e42307d7666dd8caeadbb23dea2c"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/rehab26_baseline.py",
+    "bytes": 24832,
+    "sha256": "acfab361b48c9971704d8d0f9a0141507b66e7e8d69cec03177dd8d0af275266"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/rehab26_data.py",
+    "bytes": 12404,
+    "sha256": "ca4464de61a8a91098122bc209657571be99eeb5e57320c774e2d7095ac8620b"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/rehab26_features.py",
+    "bytes": 3414,
+    "sha256": "c5cd038af8e82af58c5d4de6358c5c4aa43d7b2f4b44f0fc032c83f1b7e1f2fc"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/report_rehab26.py",
+    "bytes": 16435,
+    "sha256": "edaece9999bb494f6501e451f6bfcfa5085ee4c2f62aeb123b6a5ff73895983d"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/scripts/visualize_rehab26.py",
+    "bytes": 3750,
+    "sha256": "9d4c8648a64d7af8bf14cd8d35273e39468be32f8ef4a0c66d5b93be64fd6109"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/tests/test_protocol.py",
+    "bytes": 1850,
+    "sha256": "1cebc0e47ec4f3d61cd636e81f58af0c9d3bdcf6e74eeda18a6fb3153845ed8c"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/tests/test_rehab26_data.py",
+    "bytes": 5395,
+    "sha256": "c87368d185ff6dd7b4d3d5b95d198ec5a1b89b28d8085a7e9d82392fe764c77c"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/tests/test_rehab26_evaluation.py",
+    "bytes": 3034,
+    "sha256": "b6de1e07a2dacba6a28765b067c5fa5976a5876c0399e0cb364afac9a0a54072"
+  },
+  {
+    "group": "source",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/source/tests/test_rehab26_features.py",
+    "bytes": 4165,
+    "sha256": "3a41b84a265670f3566db995e93d05783360bc3973c8f53320df2d981aa4882f"
+  },
+  {
+    "group": "journal",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/environment.json",
+    "bytes": 187,
+    "sha256": "740b7ff18546d9c820ef2a1f9e86bfae84d6b0fb4219353e2f25d4845cee9f96"
+  },
+  {
+    "group": "journal",
+    "path": "experiments/runs/20261105-223447_rehab26_global_geometry_v1_b8d0914e/run.log",
+    "bytes": 159,
+    "sha256": "398bc55cd5b16f1f18d3ebfd3cd56d5e10f01ca541789902753a81e1728a8727"
+  }
+]

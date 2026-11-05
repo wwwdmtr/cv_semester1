@@ -1,0 +1,15 @@
+Журнал запуска: /Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/experiments/runs/20261105-223921_rehab26_logging_reproducibility_98ea352e
+Внешний участник Honza: подбор только на Mima, Petra, Terka, Vasil.
+Внешний участник Mima: подбор только на Honza, Petra, Terka, Vasil.
+Внешний участник Petra: подбор только на Honza, Mima, Terka, Vasil.
+Внешний участник Terka: подбор только на Honza, Mima, Petra, Vasil.
+Внешний участник Vasil: подбор только на Honza, Mima, Petra, Terka.
+Финальный выбор параметров: отдельная проверка по людям на всех доступных обучающих данных.
+dummy              Macro-F1=0.277 ± 0.001; FPR=0.000; recall_error=0.000
+logreg_fixed       Macro-F1=0.662 ± 0.125; FPR=0.288; recall_error=0.788
+logreg_tuned       Macro-F1=0.672 ± 0.095; FPR=0.211; recall_error=0.742
+svm_tuned          Macro-F1=0.446 ± 0.183; FPR=0.393; recall_error=0.598
+extra_trees_tuned  Macro-F1=0.499 ± 0.089; FPR=0.205; recall_error=0.553
+inner_selected     Macro-F1=0.672 ± 0.095; FPR=0.211; recall_error=0.742
+Отчёты: /Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/experiments/runs/20261105-223921_rehab26_logging_reproducibility_98ea352e/reports; модели: /Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/models/experiments/20261105-223921_rehab26_logging_reproducibility_98ea352e
+Отчёт и графики: /Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/experiments/runs/20261105-223921_rehab26_logging_reproducibility_98ea352e/reports

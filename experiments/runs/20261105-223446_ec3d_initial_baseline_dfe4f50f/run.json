@@ -1,0 +1,92 @@
+{
+  "run_id": "20261105-223446_ec3d_initial_baseline_dfe4f50f",
+  "label": "ec3d_initial_baseline",
+  "dataset": "EC3D",
+  "hypothesis": "",
+  "note": "Исходный эксперимент: 132 повтора, 4 человека, две разные задачи. Веса восстановлены отдельным повторным обучением 05.11; точная версия кода первого обучения не записывалась.",
+  "parent_run": null,
+  "status": "imported_completed",
+  "recorded_at_utc": "2026-11-05T19:34:46.676682+00:00",
+  "started_at_utc": null,
+  "imported_existing_results": true,
+  "reports": "experiments/runs/20261105-223446_ec3d_initial_baseline_dfe4f50f/reports",
+  "models": "models/experiments/20261105-223446_ec3d_initial_baseline_dfe4f50f",
+  "evidence": "exploratory",
+  "results": [
+    {
+      "dataset": "EC3D",
+      "task": "binary",
+      "method": "dummy",
+      "macro_f1": 0.4070402867572679,
+      "macro_f1_std": 0.010407429131493376,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 1.0,
+      "error_recall": null,
+      "rates_aggregation": "pooled_predictions"
+    },
+    {
+      "dataset": "EC3D",
+      "task": "binary",
+      "method": "geometry_logreg",
+      "macro_f1": 0.7862777053079085,
+      "macro_f1_std": 0.23279256340508614,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.34146341463414637,
+      "error_recall": null,
+      "rates_aggregation": "pooled_predictions"
+    },
+    {
+      "dataset": "EC3D",
+      "task": "binary",
+      "method": "resampled_logreg",
+      "macro_f1": 0.6223583446682442,
+      "macro_f1_std": 0.22085321040838432,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.43902439024390244,
+      "error_recall": null,
+      "rates_aggregation": "pooled_predictions"
+    },
+    {
+      "dataset": "EC3D",
+      "task": "instruction",
+      "method": "dummy",
+      "macro_f1": 0.0951952164870486,
+      "macro_f1_std": 0.0071193399998044195,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.0,
+      "error_recall": null,
+      "rates_aggregation": "pooled_predictions"
+    },
+    {
+      "dataset": "EC3D",
+      "task": "instruction",
+      "method": "geometry_logreg",
+      "macro_f1": 0.6223455890514714,
+      "macro_f1_std": 0.03481699542571416,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.6097560975609756,
+      "error_recall": null,
+      "rates_aggregation": "pooled_predictions"
+    },
+    {
+      "dataset": "EC3D",
+      "task": "instruction",
+      "method": "resampled_logreg",
+      "macro_f1": 0.4322403612301311,
+      "macro_f1_std": 0.16920976427780166,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.4634146341463415,
+      "error_recall": null,
+      "rates_aggregation": "pooled_predictions"
+    }
+  ],
+  "source_snapshot": {
+    "timing": "at_import_not_original_training",
+    "git_head": "94c7cc827f02723516e58d3652683e7b559b557d",
+    "git_worktree_dirty": true,
+    "directory": "experiments/runs/20261105-223446_ec3d_initial_baseline_dfe4f50f/source"
+  },
+  "finished_at_utc": "2026-11-05T19:34:47.067317+00:00",
+  "artifact_manifest_sha256": "3b21c0b3b1d758ca85321b4e44369d0289908b25efa5adb4ecc8b15d0dfeec14",
+  "artifact_count": 53
+}

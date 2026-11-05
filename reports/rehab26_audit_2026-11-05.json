@@ -1,0 +1,87 @@
+{
+  "checked_on": "2026-11-05",
+  "source": "https://zenodo.org/records/23018128",
+  "checksums": {
+    "Segmentation.csv": {
+      "md5": "3d1cf6b552f60ef03eb8f5db977c139f",
+      "bytes": 83334
+    },
+    "Segmentation.txt": {
+      "md5": "502475f709390d96b599da65fa45ffd3",
+      "bytes": 2019
+    },
+    "Error_types.csv": {
+      "md5": "2f89da48c2c26b4868a59deaa4fb3ed9",
+      "bytes": 934
+    },
+    "joint_names.txt": {
+      "md5": "2d6999cedf3775d3e9dded2e87b8d035",
+      "bytes": 511
+    }
+  },
+  "all_exercise_physical_repetitions": 1665,
+  "squat_physical_repetitions": 554,
+  "squat_by_person": {
+    "Honza": 110,
+    "Mima": 111,
+    "Petra": 110,
+    "Terka": 110,
+    "Vasil": 113
+  },
+  "squat_by_correctness": {
+    "1": 276,
+    "5": 278
+  },
+  "squat_by_primary_error": {
+    "ERR_KNEES_FORWARD": 55,
+    "ERR_KNEES_INSIDE": 56,
+    "ERR_LIFTED_HEELS": 56,
+    "ERR_SHALLOW_SQUAT": 56,
+    "ERR_TORSO_TO_SIDE": 55,
+    "correct": 276
+  },
+  "squat_rows_with_additional_errors": 0,
+  "selected_three_category_physical_repetitions": 388,
+  "selected_three_category_camera_observations_if_all_available": 1164,
+  "selected_by_person": {
+    "Honza": 77,
+    "Mima": 78,
+    "Petra": 77,
+    "Terka": 77,
+    "Vasil": 79
+  },
+  "excluded_other_error_repetitions": 166,
+  "naive_video_plus_repetition_key_collisions": 502,
+  "physical_repetition_key": [
+    "video_id",
+    "first_frame",
+    "last_frame"
+  ],
+  "camera_offsets_degrees": {
+    "cam1": 0,
+    "cam2": 45,
+    "cam3": 90
+  },
+  "view_angle_formula": "camera_offset - person_orientation",
+  "training_run": false,
+  "scope": "Разметка проверена полностью; полный архив поз и RGB ещё не скачаны. Дополнительные ошибки допускаются схемой даже при пустых полях в текущем поднаборе.",
+  "inspected_sample": {
+    "archive_member": "mediapipe/ex6/ex6_Petra_cam3_3d.npy",
+    "shape": [
+      15526,
+      33,
+      4
+    ],
+    "dtype": "float64",
+    "coordinates_all_finite": true,
+    "visibility_all_finite": true,
+    "visibility_min": 0.027161788195371628,
+    "visibility_max": 0.9999975562095642,
+    "fraction_visibility_below_half": 0.08260239910375167,
+    "annotated_repetitions": 110,
+    "repetition_end_outside_array": 0,
+    "archive_member_crc32": "13638f92",
+    "sample_sha256": "7412b04236b2fb5473eb4d311cb0ded33d9402a89b25a2e292e6391d2ab394d2",
+    "note": "Изучен один файл, извлечённый HTTP Range из архива; это не аудит всех поз и не оценка модели."
+  }
+}
