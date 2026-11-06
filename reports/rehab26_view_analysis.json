@@ -1,0 +1,151 @@
+{
+  "analysis": "rehab26_view_consistency_v1",
+  "method": "inner_selected",
+  "overall": {
+    "observations": 1164,
+    "physical_repetitions": 388,
+    "macro_f1": 0.6806752975110193,
+    "false_feedback_rate": 0.21014492753623187,
+    "error_recall": 0.7380952380952381,
+    "specific_error_type_recall": 0.6755952380952381,
+    "per_class_f1": {
+      "корректно по протоколу": 0.8331210191082801,
+      "колени внутрь": 0.44387755102040716,
+      "недостаточная глубина": 0.7650273224043709
+    }
+  },
+  "by_camera": [
+    {
+      "group": "cam1",
+      "observations": 388,
+      "physical_repetitions": 388,
+      "macro_f1": 0.6446211638801282,
+      "false_feedback_rate": 0.3115942028985507,
+      "error_recall": 0.7678571428571429,
+      "specific_error_type_recall": 0.705357142857143,
+      "per_class_f1": {
+        "корректно по протоколу": 0.7723577235772386,
+        "колени внутрь": 0.40740740740740766,
+        "недостаточная глубина": 0.7540983606557383
+      }
+    },
+    {
+      "group": "cam2",
+      "observations": 388,
+      "physical_repetitions": 388,
+      "macro_f1": 0.6764943553178857,
+      "false_feedback_rate": 0.2101449275362319,
+      "error_recall": 0.7232142857142858,
+      "specific_error_type_recall": 0.6607142857142857,
+      "per_class_f1": {
+        "корректно по протоколу": 0.8304761904761926,
+        "колени внутрь": 0.4090909090909091,
+        "недостаточная глубина": 0.7899159663865554
+      }
+    },
+    {
+      "group": "cam3",
+      "observations": 388,
+      "physical_repetitions": 388,
+      "macro_f1": 0.7309043313527949,
+      "false_feedback_rate": 0.10869565217391305,
+      "error_recall": 0.7232142857142858,
+      "specific_error_type_recall": 0.6607142857142858,
+      "per_class_f1": {
+        "корректно по протоколу": 0.8896925858951189,
+        "колени внутрь": 0.5510204081632651,
+        "недостаточная глубина": 0.7520000000000007
+      }
+    }
+  ],
+  "by_view_bin": [
+    {
+      "group": "frontal_abs_le_30",
+      "observations": 529,
+      "physical_repetitions": 388,
+      "macro_f1": 0.6489014730686277,
+      "false_feedback_rate": 0.24734042553191488,
+      "error_recall": 0.7581699346405228,
+      "specific_error_type_recall": 0.6666666666666666,
+      "per_class_f1": {
+        "корректно по протоколу": 0.8132183908045995,
+        "колени внутрь": 0.42162162162162203,
+        "недостаточная глубина": 0.7118644067796616
+      }
+    },
+    {
+      "group": "oblique_30_to_60",
+      "observations": 352,
+      "physical_repetitions": 247,
+      "macro_f1": 0.7333955735595086,
+      "false_feedback_rate": 0.16733067729083667,
+      "error_recall": 0.7227722772277224,
+      "specific_error_type_recall": 0.7128712871287126,
+      "per_class_f1": {
+        "корректно по протоколу": 0.8565573770491822,
+        "колени внутрь": 0.4864864864864864,
+        "недостаточная глубина": 0.8571428571428573
+      }
+    },
+    {
+      "group": "profile_abs_ge_60",
+      "observations": 283,
+      "physical_repetitions": 283,
+      "macro_f1": 0.6795943334155767,
+      "false_feedback_rate": 0.19402985074626863,
+      "error_recall": 0.7195121951219512,
+      "specific_error_type_recall": 0.646341463414634,
+      "per_class_f1": {
+        "корректно по протоколу": 0.8393782383419686,
+        "колени внутрь": 0.4374999999999997,
+        "недостаточная глубина": 0.7619047619047616
+      }
+    }
+  ],
+  "paired_views": {
+    "physical_repetitions": 388,
+    "view_disagreement_count": 164,
+    "view_disagreement_rate": 0.422680412371134,
+    "all_views_correct_count": 210,
+    "all_views_correct_rate": 0.5412371134020618,
+    "no_view_correct_count": 20,
+    "no_view_correct_rate": 0.05154639175257732,
+    "view_count_distribution": {
+      "3": 388
+    },
+    "by_true_label": {
+      "корректно по протоколу": {
+        "physical_repetitions": 276,
+        "view_disagreement_count": 113,
+        "view_disagreement_rate": 0.40942028985507245,
+        "all_views_correct_count": 159,
+        "all_views_correct_rate": 0.5760869565217391,
+        "no_view_correct_count": 7,
+        "no_view_correct_rate": 0.025362318840579712
+      },
+      "колени внутрь": {
+        "physical_repetitions": 56,
+        "view_disagreement_count": 33,
+        "view_disagreement_rate": 0.5892857142857143,
+        "all_views_correct_count": 14,
+        "all_views_correct_rate": 0.25,
+        "no_view_correct_count": 11,
+        "no_view_correct_rate": 0.19642857142857142
+      },
+      "недостаточная глубина": {
+        "physical_repetitions": 56,
+        "view_disagreement_count": 18,
+        "view_disagreement_rate": 0.32142857142857145,
+        "all_views_correct_count": 37,
+        "all_views_correct_rate": 0.6607142857142857,
+        "no_view_correct_count": 2,
+        "no_view_correct_rate": 0.03571428571428571
+      }
+    }
+  },
+  "notes": [
+    "Метрики получены из сохранённых внешних предсказаний; обучение не повторялось.",
+    "Камеры одного физического повтора сравниваются попарно, но датасет содержит только пять людей.",
+    "Camera ID и геометрический диапазон ракурса — разные группировки; выводы по ним нельзя смешивать."
+  ]
+}

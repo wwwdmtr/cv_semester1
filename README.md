@@ -8,6 +8,7 @@
 - [Задачи на неделю и критерии готовности](docs/roadmap.md).
 - [Технический протокол и краевые случаи](docs/experiment-protocol.md).
 - [Текущий результат REHAB26: сравнение, ошибки и графики](reports/rehab26_baseline/README.md).
+- [Согласованность предсказаний между ракурсами одного движения](reports/rehab26_view_analysis.md).
 - [Журнал всех запусков и промежуточных результатов](experiments/README.md).
 - [Полный аудит выбранных 3D-поз](reports/rehab26_data_audit.json).
 - [Выполненный аудит разметки REHAB26](reports/rehab26_audit_2026-11-05.json).
