@@ -19,6 +19,42 @@ METRICS = {"summaries": [{
 
 
 class ExperimentLogTests(unittest.TestCase):
+    def test_identical_source_snapshot_is_stored_once(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "scripts").mkdir()
+            (root / "tests").mkdir()
+            (root / "docs").mkdir()
+            (root / "scripts" / "train.py").write_text("print('same source')\n")
+            (root / "tests" / "test_train.py").write_text("# same test\n")
+            (root / "requirements.txt").write_text("numpy==2.2.6\n")
+            (root / "docs" / "experiment-protocol.md").write_text("protocol v1\n")
+
+            first = Experiment("first", "REHAB26", root=root)
+            second = Experiment("second", "REHAB26", root=root)
+
+            self.assertEqual(first.source_dir, second.source_dir)
+            self.assertEqual(first.record["source_snapshot"]["snapshot_id"], second.record["source_snapshot"]["snapshot_id"])
+            self.assertFalse((first.directory / "source").exists())
+            self.assertFalse((second.directory / "source").exists())
+            snapshots = [path for path in (root / "experiments" / "sources").iterdir() if path.is_dir()]
+            self.assertEqual(snapshots, [first.source_dir])
+            self.assertEqual((first.source_dir / "scripts" / "train.py").read_text(), "print('same source')\n")
+
+    def test_changed_source_creates_new_snapshot_without_changing_old_one(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "scripts").mkdir()
+            source = root / "scripts" / "train.py"
+            source.write_text("version = 1\n")
+            first = Experiment("first", "REHAB26", root=root)
+            source.write_text("version = 2\n")
+            second = Experiment("second", "REHAB26", root=root)
+
+            self.assertNotEqual(first.source_dir, second.source_dir)
+            self.assertEqual((first.source_dir / "scripts" / "train.py").read_text(), "version = 1\n")
+            self.assertEqual((second.source_dir / "scripts" / "train.py").read_text(), "version = 2\n")
+
     def test_import_is_a_real_snapshot_and_does_not_claim_original_code(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
