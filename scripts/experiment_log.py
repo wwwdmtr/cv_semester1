@@ -134,11 +134,38 @@ class Experiment:
     def _capture_source(self, imported):
         paths = [*self.root.glob("scripts/*.py"), *self.root.glob("tests/*.py")]
         paths += [self.root / "requirements.txt", self.root / "docs" / "experiment-protocol.md"]
-        for path in paths:
-            if path.is_file():
-                target = self.directory / "source" / path.relative_to(self.root)
-                target.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(path, target)
+        paths = sorted({path.resolve() for path in paths if path.is_file()})
+        manifest = [{
+            "path": path.relative_to(self.root).as_posix(),
+            "bytes": path.stat().st_size,
+            "sha256": digest(path),
+        } for path in paths]
+        manifest_bytes = json.dumps(manifest, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+        snapshot_id = hashlib.sha256(manifest_bytes).hexdigest()
+        self.source_dir = self.root / "experiments" / "sources" / snapshot_id
+        manifest_path = self.source_dir / "manifest.json"
+        if manifest_path.exists():
+            existing = json.loads(manifest_path.read_text(encoding="utf-8"))
+            if existing != manifest:
+                raise ValueError(f"Коллизия снимка исходников: {snapshot_id}")
+        else:
+            temporary = self.source_dir.with_name(f".{snapshot_id}.{uuid4().hex}.tmp")
+            temporary.mkdir(parents=True, exist_ok=False)
+            try:
+                for path in paths:
+                    target = temporary / path.relative_to(self.root)
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(path, target)
+                write_json(temporary / "manifest.json", manifest)
+                try:
+                    temporary.replace(self.source_dir)
+                except FileExistsError:
+                    # Другой одновременный запуск уже сохранил тот же снимок.
+                    shutil.rmtree(temporary)
+            except BaseException:
+                if temporary.exists():
+                    shutil.rmtree(temporary)
+                raise
         versions = {"python": platform.python_version(), "platform": platform.platform()}
         for package in ("numpy", "scipy", "scikit-learn", "joblib", "matplotlib"):
             try:
@@ -152,7 +179,9 @@ class Experiment:
             "timing": "at_import_not_original_training" if imported else "before_execution",
             "git_head": head.stdout.strip() if head.returncode == 0 else None,
             "git_worktree_dirty": bool(dirty.stdout) if dirty.returncode == 0 else None,
-            "directory": self.relative(self.directory / "source"),
+            "snapshot_id": snapshot_id,
+            "directory": self.relative(self.source_dir),
+            "files": len(manifest),
         }
 
     @contextmanager
@@ -195,11 +224,11 @@ class Experiment:
             self.record["dataset_fingerprints"] = {k: ds[k] for k in ("annotations_sha256", "feature_matrix_sha256", "n_observations", "n_physical_repetitions") if k in ds}
             matches = {}
             for filename, expected in config.get("scripts_sha256", {}).items():
-                source = self.directory / "source" / "scripts" / filename
+                source = self.source_dir / "scripts" / filename
                 matches[filename] = source.exists() and digest(source) == expected
             self.record["snapshot_matches_recorded_training_scripts"] = matches or None
         artifacts = []
-        for group, directory in (("reports", self.report_dir), ("models", self.models_dir), ("source", self.directory / "source")):
+        for group, directory in (("reports", self.report_dir), ("models", self.models_dir), ("source", self.source_dir)):
             if directory.exists():
                 for path in sorted(directory.rglob("*")):
                     if path.is_file():
