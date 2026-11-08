@@ -1,0 +1,873 @@
+{
+  "protocol": "nested leave-one-person-out; augmentation only in inner/outer training subsets",
+  "transforms": [
+    "original",
+    "mirror",
+    "temporal_0.85",
+    "temporal_1.15"
+  ],
+  "excluded_transform": "coordinate noise: cannot guarantee preservation of borderline technique labels",
+  "observations": 1164,
+  "physical_repetitions": 388,
+  "people": [
+    "Honza",
+    "Mima",
+    "Petra",
+    "Terka",
+    "Vasil"
+  ],
+  "data_audit": {
+    "source": "https://zenodo.org/records/23018128",
+    "dimensions": "3d",
+    "selected_physical_repetitions": 388,
+    "selected_camera_observations": 1164
+  },
+  "max_feature_difference_from_original": {
+    "mirror": 0.8310254270070501,
+    "temporal_0.85": 0.12490009028622218,
+    "temporal_1.15": 0.08918970351918842
+  },
+  "without_augmentation": {
+    "summary": {
+      "macro_f1_mean": 0.6722379905811201,
+      "macro_f1_std": 0.09464176733937557,
+      "false_feedback_rate_mean": 0.2108225108225108,
+      "false_feedback_rate_std": 0.15806925245063996,
+      "error_recall_mean": 0.7416337285902501,
+      "error_recall_std": 0.2290821405904511,
+      "specific_error_type_recall_mean": 0.6790513833992095,
+      "specific_error_type_recall_std": 0.22404842756238705,
+      "specific_remark_precision_mean": 0.5948755983998949,
+      "specific_remark_precision_std": 0.14433131261444992
+    },
+    "folds": [
+      {
+        "test_person": "Honza",
+        "candidate": {
+          "id": "logreg_C1_unweighted",
+          "family": "logreg",
+          "C": 1.0,
+          "balanced": false
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.6786365709074323,
+        "accuracy": 0.6493506493506492,
+        "false_feedback_rate": 0.4545454545454545,
+        "error_recall": 0.9545454545454543,
+        "correct_recall": 0.5454545454545454,
+        "specific_error_type_recall": 0.909090909090909,
+        "specific_remark_precision": 0.434782608695652,
+        "per_class_f1": [
+          0.6976744186046496,
+          0.4264705882352944,
+          0.9117647058823528
+        ],
+        "per_class_support": [
+          55.0,
+          11.0,
+          11.0
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            29.99999999999996,
+            24.333333333333314,
+            0.6666666666666666
+          ],
+          [
+            0.6666666666666666,
+            9.666666666666666,
+            0.6666666666666666
+          ],
+          [
+            0.3333333333333333,
+            0.3333333333333333,
+            10.333333333333334
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            90,
+            73,
+            2
+          ],
+          [
+            2,
+            29,
+            2
+          ],
+          [
+            1,
+            1,
+            31
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 77.0,
+          "correct_executions": 55.0,
+          "false_feedback": 24.999999999999996,
+          "error_executions": 21.999999999999996,
+          "detected_errors": 20.99999999999999,
+          "missed_errors": 1.0,
+          "correct_error_type": 19.999999999999993,
+          "remarks": 46.0
+        },
+        "counts_observations": {
+          "all": 231,
+          "correct_executions": 165,
+          "false_feedback": 75,
+          "error_executions": 66,
+          "detected_errors": 63,
+          "missed_errors": 3,
+          "correct_error_type": 60,
+          "remarks": 138
+        }
+      },
+      {
+        "test_person": "Mima",
+        "candidate": {
+          "id": "logreg_C0.1_balanced",
+          "family": "logreg",
+          "C": 0.1,
+          "balanced": true
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.7823852295409178,
+        "accuracy": 0.8632478632478634,
+        "false_feedback_rate": 0.06666666666666667,
+        "error_recall": 0.7826086956521738,
+        "correct_recall": 0.9333333333333332,
+        "specific_error_type_recall": 0.6956521739130436,
+        "specific_remark_precision": 0.7384615384615385,
+        "per_class_f1": [
+          0.9221556886227541,
+          0.6249999999999997,
+          0.7999999999999997
+        ],
+        "per_class_support": [
+          55.0,
+          11.0,
+          12.000000000000002
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            51.33333333333342,
+            3.3333333333333335,
+            0.3333333333333333
+          ],
+          [
+            2.6666666666666665,
+            6.666666666666664,
+            1.6666666666666665
+          ],
+          [
+            2.333333333333333,
+            0.3333333333333333,
+            9.333333333333332
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            154,
+            10,
+            1
+          ],
+          [
+            8,
+            20,
+            5
+          ],
+          [
+            7,
+            1,
+            28
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 78.0,
+          "correct_executions": 55.0,
+          "false_feedback": 3.666666666666667,
+          "error_executions": 22.999999999999993,
+          "detected_errors": 17.999999999999993,
+          "missed_errors": 4.999999999999999,
+          "correct_error_type": 15.999999999999998,
+          "remarks": 21.666666666666664
+        },
+        "counts_observations": {
+          "all": 234,
+          "correct_executions": 165,
+          "false_feedback": 11,
+          "error_executions": 69,
+          "detected_errors": 54,
+          "missed_errors": 15,
+          "correct_error_type": 48,
+          "remarks": 65
+        }
+      },
+      {
+        "test_person": "Petra",
+        "candidate": {
+          "id": "logreg_C1_balanced",
+          "family": "logreg",
+          "C": 1.0,
+          "balanced": true
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.769601889338731,
+        "accuracy": 0.8181818181818182,
+        "false_feedback_rate": 0.2,
+        "error_recall": 0.8939393939393938,
+        "correct_recall": 0.7999999999999998,
+        "specific_error_type_recall": 0.8636363636363636,
+        "specific_remark_precision": 0.6195652173913043,
+        "per_class_f1": [
+          0.8684210526315782,
+          0.6153846153846149,
+          0.8249999999999997
+        ],
+        "per_class_support": [
+          55.0,
+          11.0,
+          11.0
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            44.000000000000036,
+            6.999999999999997,
+            4.0
+          ],
+          [
+            2.333333333333333,
+            7.9999999999999964,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.0,
+            11.000000000000002
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            132,
+            21,
+            12
+          ],
+          [
+            7,
+            24,
+            2
+          ],
+          [
+            0,
+            0,
+            33
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 77.0,
+          "correct_executions": 55.0,
+          "false_feedback": 11.0,
+          "error_executions": 21.999999999999996,
+          "detected_errors": 19.66666666666666,
+          "missed_errors": 2.333333333333333,
+          "correct_error_type": 18.999999999999996,
+          "remarks": 30.666666666666664
+        },
+        "counts_observations": {
+          "all": 231,
+          "correct_executions": 165,
+          "false_feedback": 33,
+          "error_executions": 66,
+          "detected_errors": 59,
+          "missed_errors": 7,
+          "correct_error_type": 57,
+          "remarks": 92
+        }
+      },
+      {
+        "test_person": "Terka",
+        "candidate": {
+          "id": "logreg_C0.1_balanced",
+          "family": "logreg",
+          "C": 0.1,
+          "balanced": true
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.5765426170468184,
+        "accuracy": 0.6796536796536795,
+        "false_feedback_rate": 0.309090909090909,
+        "error_recall": 0.7727272727272727,
+        "correct_recall": 0.6909090909090909,
+        "specific_error_type_recall": 0.6515151515151516,
+        "specific_remark_precision": 0.4215686274509802,
+        "per_class_f1": [
+          0.7755102040816314,
+          0.2941176470588235,
+          0.6600000000000004
+        ],
+        "per_class_support": [
+          55.0,
+          11.0,
+          11.0
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            37.99999999999999,
+            8.33333333333333,
+            8.666666666666664
+          ],
+          [
+            4.999999999999999,
+            3.3333333333333335,
+            2.6666666666666665
+          ],
+          [
+            0.0,
+            0.0,
+            11.000000000000002
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            114,
+            25,
+            26
+          ],
+          [
+            15,
+            10,
+            8
+          ],
+          [
+            0,
+            0,
+            33
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 77.0,
+          "correct_executions": 55.0,
+          "false_feedback": 16.999999999999996,
+          "error_executions": 21.999999999999996,
+          "detected_errors": 16.999999999999996,
+          "missed_errors": 4.999999999999999,
+          "correct_error_type": 14.333333333333334,
+          "remarks": 34.000000000000014
+        },
+        "counts_observations": {
+          "all": 231,
+          "correct_executions": 165,
+          "false_feedback": 51,
+          "error_executions": 66,
+          "detected_errors": 51,
+          "missed_errors": 15,
+          "correct_error_type": 43,
+          "remarks": 102
+        }
+      },
+      {
+        "test_person": "Vasil",
+        "candidate": {
+          "id": "logreg_C10_unweighted",
+          "family": "logreg",
+          "C": 10.0,
+          "balanced": false
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.5540236460717011,
+        "accuracy": 0.7721518987341771,
+        "false_feedback_rate": 0.023809523809523808,
+        "error_recall": 0.30434782608695654,
+        "correct_recall": 0.9761904761904762,
+        "specific_error_type_recall": 0.27536231884057977,
+        "specific_remark_precision": 0.7599999999999998,
+        "per_class_f1": [
+          0.8631578947368426,
+          0.17391304347826084,
+          0.6249999999999999
+        ],
+        "per_class_support": [
+          56.0,
+          12.000000000000002,
+          11.0
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            54.66666666666678,
+            1.3333333333333333,
+            0.0
+          ],
+          [
+            10.666666666666668,
+            1.3333333333333333,
+            0.0
+          ],
+          [
+            5.333333333333332,
+            0.6666666666666666,
+            4.999999999999999
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            164,
+            4,
+            0
+          ],
+          [
+            32,
+            4,
+            0
+          ],
+          [
+            16,
+            2,
+            15
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 79.0,
+          "correct_executions": 56.0,
+          "false_feedback": 1.3333333333333333,
+          "error_executions": 22.999999999999993,
+          "detected_errors": 6.999999999999998,
+          "missed_errors": 15.999999999999998,
+          "correct_error_type": 6.333333333333332,
+          "remarks": 8.333333333333334
+        },
+        "counts_observations": {
+          "all": 237,
+          "correct_executions": 168,
+          "false_feedback": 4,
+          "error_executions": 69,
+          "detected_errors": 21,
+          "missed_errors": 48,
+          "correct_error_type": 19,
+          "remarks": 25
+        }
+      }
+    ]
+  },
+  "with_augmentation": {
+    "summary": {
+      "macro_f1_mean": 0.6536030978886791,
+      "macro_f1_std": 0.06607032457724486,
+      "false_feedback_rate_mean": 0.20844155844155843,
+      "false_feedback_rate_std": 0.17672700889788778,
+      "error_recall_mean": 0.7126482213438735,
+      "error_recall_std": 0.22243223232993284,
+      "specific_error_type_recall_mean": 0.6495388669301712,
+      "specific_error_type_recall_std": 0.20546306346923368,
+      "specific_remark_precision_mean": 0.6361763775792552,
+      "specific_remark_precision_std": 0.22225291905382988
+    },
+    "folds": [
+      {
+        "test_person": "Honza",
+        "candidate": {
+          "id": "logreg_C1_unweighted",
+          "family": "logreg",
+          "C": 1.0,
+          "balanced": false
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.686848282694125,
+        "accuracy": 0.6536796536796536,
+        "false_feedback_rate": 0.4545454545454545,
+        "error_recall": 0.9696969696969698,
+        "correct_recall": 0.5454545454545454,
+        "specific_error_type_recall": 0.924242424242424,
+        "specific_remark_precision": 0.43884892086330923,
+        "per_class_f1": [
+          0.7003891050583643,
+          0.43478260869565244,
+          0.9253731343283582
+        ],
+        "per_class_support": [
+          55.0,
+          11.0,
+          11.0
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            29.99999999999996,
+            24.333333333333314,
+            0.6666666666666666
+          ],
+          [
+            0.6666666666666666,
+            10.0,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            10.333333333333334
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            90,
+            73,
+            2
+          ],
+          [
+            2,
+            30,
+            1
+          ],
+          [
+            0,
+            2,
+            31
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 77.0,
+          "correct_executions": 55.0,
+          "false_feedback": 24.999999999999996,
+          "error_executions": 21.999999999999996,
+          "detected_errors": 21.333333333333332,
+          "missed_errors": 0.6666666666666666,
+          "correct_error_type": 20.333333333333325,
+          "remarks": 46.33333333333333
+        },
+        "counts_observations": {
+          "all": 231,
+          "correct_executions": 165,
+          "false_feedback": 75,
+          "error_executions": 66,
+          "detected_errors": 64,
+          "missed_errors": 2,
+          "correct_error_type": 61,
+          "remarks": 139
+        }
+      },
+      {
+        "test_person": "Mima",
+        "candidate": {
+          "id": "logreg_C10_unweighted",
+          "family": "logreg",
+          "C": 10.0,
+          "balanced": false
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.7417757800794735,
+        "accuracy": 0.8717948717948718,
+        "false_feedback_rate": 0.0,
+        "error_recall": 0.6086956521739132,
+        "correct_recall": 1.0,
+        "specific_error_type_recall": 0.5652173913043481,
+        "specific_remark_precision": 0.9285714285714288,
+        "per_class_f1": [
+          0.9243697478991594,
+          0.4186046511627906,
+          0.8823529411764705
+        ],
+        "per_class_support": [
+          55.0,
+          11.0,
+          12.000000000000002
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            55.000000000000114,
+            0.0,
+            0.0
+          ],
+          [
+            7.33333333333333,
+            3.0,
+            0.6666666666666666
+          ],
+          [
+            1.6666666666666665,
+            0.3333333333333333,
+            10.0
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            165,
+            0,
+            0
+          ],
+          [
+            22,
+            9,
+            2
+          ],
+          [
+            5,
+            1,
+            30
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 78.0,
+          "correct_executions": 55.0,
+          "false_feedback": 0.0,
+          "error_executions": 22.999999999999993,
+          "detected_errors": 14.0,
+          "missed_errors": 9.000000000000002,
+          "correct_error_type": 13.000000000000004,
+          "remarks": 14.0
+        },
+        "counts_observations": {
+          "all": 234,
+          "correct_executions": 165,
+          "false_feedback": 0,
+          "error_executions": 69,
+          "detected_errors": 42,
+          "missed_errors": 27,
+          "correct_error_type": 39,
+          "remarks": 42
+        }
+      },
+      {
+        "test_person": "Petra",
+        "candidate": {
+          "id": "logreg_C10_balanced",
+          "family": "logreg",
+          "C": 10.0,
+          "balanced": true
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.6862954162954159,
+        "accuracy": 0.7489177489177488,
+        "false_feedback_rate": 0.26666666666666666,
+        "error_recall": 0.8484848484848485,
+        "correct_recall": 0.7333333333333333,
+        "specific_error_type_recall": 0.7878787878787878,
+        "specific_remark_precision": 0.5199999999999997,
+        "per_class_f1": [
+          0.8175675675675665,
+          0.5599999999999996,
+          0.6813186813186813
+        ],
+        "per_class_support": [
+          55.0,
+          11.0,
+          11.0
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            40.33333333333334,
+            6.333333333333331,
+            8.33333333333333
+          ],
+          [
+            3.3333333333333335,
+            6.999999999999997,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            10.333333333333334
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            121,
+            19,
+            25
+          ],
+          [
+            10,
+            21,
+            2
+          ],
+          [
+            0,
+            2,
+            31
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 77.0,
+          "correct_executions": 55.0,
+          "false_feedback": 14.666666666666668,
+          "error_executions": 21.999999999999996,
+          "detected_errors": 18.666666666666664,
+          "missed_errors": 3.3333333333333335,
+          "correct_error_type": 17.33333333333333,
+          "remarks": 33.33333333333334
+        },
+        "counts_observations": {
+          "all": 231,
+          "correct_executions": 165,
+          "false_feedback": 44,
+          "error_executions": 66,
+          "detected_errors": 56,
+          "missed_errors": 10,
+          "correct_error_type": 52,
+          "remarks": 100
+        }
+      },
+      {
+        "test_person": "Terka",
+        "candidate": {
+          "id": "logreg_C1_balanced",
+          "family": "logreg",
+          "C": 1.0,
+          "balanced": true
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.5777752879516656,
+        "accuracy": 0.6796536796536796,
+        "false_feedback_rate": 0.309090909090909,
+        "error_recall": 0.8030303030303029,
+        "correct_recall": 0.6909090909090909,
+        "specific_error_type_recall": 0.6515151515151516,
+        "specific_remark_precision": 0.4134615384615385,
+        "per_class_f1": [
+          0.780821917808218,
+          0.31884057971014484,
+          0.6336633663366339
+        ],
+        "per_class_support": [
+          55.0,
+          11.0,
+          11.0
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            37.99999999999999,
+            7.9999999999999964,
+            8.999999999999998
+          ],
+          [
+            4.333333333333333,
+            3.666666666666667,
+            3.0
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            10.666666666666668
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            114,
+            24,
+            27
+          ],
+          [
+            13,
+            11,
+            9
+          ],
+          [
+            0,
+            1,
+            32
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 77.0,
+          "correct_executions": 55.0,
+          "false_feedback": 16.999999999999996,
+          "error_executions": 21.999999999999996,
+          "detected_errors": 17.66666666666666,
+          "missed_errors": 4.333333333333333,
+          "correct_error_type": 14.333333333333334,
+          "remarks": 34.666666666666664
+        },
+        "counts_observations": {
+          "all": 231,
+          "correct_executions": 165,
+          "false_feedback": 51,
+          "error_executions": 66,
+          "detected_errors": 53,
+          "missed_errors": 13,
+          "correct_error_type": 43,
+          "remarks": 104
+        }
+      },
+      {
+        "test_person": "Vasil",
+        "candidate": {
+          "id": "logreg_C1_unweighted",
+          "family": "logreg",
+          "C": 1.0,
+          "balanced": false
+        },
+        "inner_guardrails_met": false,
+        "macro_f1": 0.5753207224227159,
+        "accuracy": 0.7932489451476794,
+        "false_feedback_rate": 0.011904761904761904,
+        "error_recall": 0.3333333333333333,
+        "correct_recall": 0.988095238095238,
+        "specific_error_type_recall": 0.31884057971014496,
+        "specific_remark_precision": 0.8799999999999997,
+        "per_class_f1": [
+          0.8736842105263163,
+          0.09756097560975607,
+          0.7547169811320753
+        ],
+        "per_class_support": [
+          56.0,
+          12.000000000000002,
+          11.0
+        ],
+        "confusion_matrix_repeat_weighted": [
+          [
+            55.33333333333345,
+            0.6666666666666666,
+            0.0
+          ],
+          [
+            11.333333333333336,
+            0.6666666666666666,
+            0.0
+          ],
+          [
+            4.0,
+            0.3333333333333333,
+            6.666666666666664
+          ]
+        ],
+        "confusion_matrix_observations": [
+          [
+            166,
+            2,
+            0
+          ],
+          [
+            34,
+            2,
+            0
+          ],
+          [
+            12,
+            1,
+            20
+          ]
+        ],
+        "counts_repeat_weighted": {
+          "all": 79.0,
+          "correct_executions": 56.0,
+          "false_feedback": 0.6666666666666666,
+          "error_executions": 22.999999999999993,
+          "detected_errors": 7.666666666666664,
+          "missed_errors": 15.333333333333336,
+          "correct_error_type": 7.333333333333331,
+          "remarks": 8.333333333333334
+        },
+        "counts_observations": {
+          "all": 237,
+          "correct_executions": 168,
+          "false_feedback": 2,
+          "error_executions": 69,
+          "detected_errors": 23,
+          "missed_errors": 46,
+          "correct_error_type": 22,
+          "remarks": 25
+        }
+      }
+    ]
+  },
+  "conclusion": "negative: fixed label-preserving augmentations did not improve held-out-person quality"
+}
