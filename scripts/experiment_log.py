@@ -20,6 +20,7 @@ from zoneinfo import ZoneInfo
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+RESEARCH_NOTES_MARKER = "<!-- RESEARCH_NOTES_START -->"
 
 
 def now():
@@ -84,6 +85,8 @@ def metric_rows(report_dir, dataset):
             "f1_aggregation": "mean_of_people", "false_feedback_rate": value["false_feedback_rate_mean"],
             "error_recall": value["error_recall_mean"], "rates_aggregation": "mean_of_people",
         })
+        if "feature_version" in value:
+            rows[-1]["feature_version"] = value["feature_version"]
     for value in payload.get("summary", []):
         rows.append({
             "dataset": dataset, "task": value["task"], "method": value["model"],
@@ -133,7 +136,7 @@ class Experiment:
 
     def _capture_source(self, imported):
         paths = [*self.root.glob("scripts/*.py"), *self.root.glob("tests/*.py")]
-        paths += [self.root / "requirements.txt", self.root / "docs" / "experiment-protocol.md"]
+        paths += [*self.root.glob("requirements*.txt"), self.root / "docs" / "experiment-protocol.md"]
         paths = sorted({path.resolve() for path in paths if path.is_file()})
         manifest = [{
             "path": path.relative_to(self.root).as_posix(),
@@ -167,7 +170,7 @@ class Experiment:
                     shutil.rmtree(temporary)
                 raise
         versions = {"python": platform.python_version(), "platform": platform.platform()}
-        for package in ("numpy", "scipy", "scikit-learn", "joblib", "matplotlib"):
+        for package in ("numpy", "scipy", "scikit-learn", "joblib", "matplotlib", "torch"):
             try:
                 versions[package] = importlib.metadata.version(package)
             except importlib.metadata.PackageNotFoundError:
@@ -246,6 +249,14 @@ class Experiment:
 def refresh_index(root=REPO_ROOT):
     root = Path(root)
     directory = root / "experiments"
+    index_path = directory / "README.md"
+    marker = RESEARCH_NOTES_MARKER.encode("utf-8")
+    notes = marker + b"\n"
+    if index_path.exists():
+        previous = index_path.read_bytes()
+        start = previous.find(marker)
+        if start >= 0:
+            notes = previous[start:]
     runs = [json.loads(p.read_text()) for p in sorted((directory / "runs").glob("*/run.json"))]
     directory.mkdir(parents=True, exist_ok=True)
     text = """# Журнал экспериментов
@@ -280,7 +291,7 @@ def refresh_index(root=REPO_ROOT):
                                "hypothesis": run.get("hypothesis"), "note": run.get("note"),
                                "parent_run": run.get("parent_run"), **result})
     text += "\nПолная таблица всех методов: [comparison.csv](comparison.csv). Подробности ведения: [инструкция](../docs/experiment-log.md).\n"
-    (directory / "README.md").write_text(text, encoding="utf-8")
+    index_path.write_bytes(text.encode("utf-8") + b"\n" + notes)
     fields = ["run_id", "label", "status", "dataset", "task", "protocol_version", "feature_version",
               "hypothesis", "note", "parent_run", "method", "macro_f1", "macro_f1_std", "f1_aggregation",
               "false_feedback_rate", "error_recall", "rates_aggregation"]

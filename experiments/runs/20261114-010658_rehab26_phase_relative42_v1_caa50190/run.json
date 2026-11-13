@@ -1,0 +1,70 @@
+{
+  "run_id": "20261114-010658_rehab26_phase_relative42_v1_caa50190",
+  "label": "rehab26_phase_relative42_v1",
+  "dataset": "REHAB26",
+  "hypothesis": "R2: помогают ли семь относительных фазовых 3D-признаков против прежних 35 при проверке нового человека?",
+  "note": "Один заранее заданный рецепт; nested LOPO; без новых клипов, GPU и перебора после внешнего теста.",
+  "parent_run": "20261105-223447_rehab26_global_geometry_v1_b8d0914e",
+  "status": "completed",
+  "recorded_at_utc": "2026-11-13T22:06:58.688348+00:00",
+  "started_at_utc": "2026-11-13T22:06:58.688353+00:00",
+  "imported_existing_results": false,
+  "reports": "experiments/runs/20261114-010658_rehab26_phase_relative42_v1_caa50190/reports",
+  "models": "models/experiments/20261114-010658_rehab26_phase_relative42_v1_caa50190",
+  "evidence": "exploratory",
+  "results": [
+    {
+      "dataset": "REHAB26",
+      "task": "three_categories",
+      "method": "global35",
+      "macro_f1": 0.6722379905811201,
+      "macro_f1_std": 0.09464176733937557,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.2108225108225108,
+      "error_recall": 0.7416337285902501,
+      "rates_aggregation": "mean_of_people",
+      "feature_version": "rehab26_global_geometry_v1"
+    },
+    {
+      "dataset": "REHAB26",
+      "task": "three_categories",
+      "method": "phase_relative42",
+      "macro_f1": 0.6868295721638484,
+      "macro_f1_std": 0.13567039632284345,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.20963203463203456,
+      "error_recall": 0.7592885375494071,
+      "rates_aggregation": "mean_of_people",
+      "feature_version": "rehab26_global_geometry_plus_phase_relative_v1"
+    }
+  ],
+  "source_snapshot": {
+    "timing": "before_execution",
+    "git_head": "7e2701fa6fa40deaa2c7e83fe6529f905f9c851e",
+    "git_worktree_dirty": true,
+    "snapshot_id": "79d93fbd2d28f38d76ffe89421d4027504f2c7dcb98649ca811a73df681ade60",
+    "directory": "experiments/sources/79d93fbd2d28f38d76ffe89421d4027504f2c7dcb98649ca811a73df681ade60",
+    "files": 40
+  },
+  "finished_at_utc": "2026-11-13T22:07:04.154195+00:00",
+  "original_training_started_at_utc": "2026-11-13T22:06:59.890356+00:00",
+  "protocol_version": "rehab26_phase_relative_geometry_v1",
+  "feature_version": "comparison_global35_phase42_v1",
+  "dataset_fingerprints": {
+    "annotations_sha256": "2b431fca60d0f722f47cb5de5844e5ff26203d6881a1cae4991cf79deb40e1e3",
+    "feature_matrix_sha256": "d8ef824c4bcf107da24aa56ca34f54229919ded9708d7c4eb12d980e1507d098",
+    "n_observations": 1164,
+    "n_physical_repetitions": 388
+  },
+  "snapshot_matches_recorded_training_scripts": {
+    "run_phase_features.py": true,
+    "evaluate_phase_features.py": true,
+    "rehab26_phase_features.py": true,
+    "rehab26_baseline.py": true,
+    "rehab26_features.py": true,
+    "rehab26_data.py": true,
+    "experiment_log.py": true
+  },
+  "artifact_manifest_sha256": "7aa5cd2ed641c00e3944007a9222d548b60f5e35b133a374305086d370110018",
+  "artifact_count": 72
+}

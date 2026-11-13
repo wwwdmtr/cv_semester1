@@ -1,0 +1,47 @@
+{
+  "version": "rehab26_temporal_geometry64_v1",
+  "names": [
+    "right_knee_angle",
+    "left_knee_angle",
+    "right_hip_angle",
+    "left_hip_angle",
+    "knee_distance",
+    "ankle_distance",
+    "hip_to_ankle_distance"
+  ],
+  "details": {
+    "version": "rehab26_temporal_geometry64_v1",
+    "shape": [
+      64,
+      7
+    ],
+    "signals": [
+      "right_knee_angle",
+      "left_knee_angle",
+      "right_hip_angle",
+      "left_hip_angle",
+      "knee_distance",
+      "ankle_distance",
+      "hip_to_ankle_distance"
+    ],
+    "input": "complete MediaPipe world pose repetition (T>=2,33,4)",
+    "resampling": "linear interpolation of each signal on normalized [0,1] time, endpoints included",
+    "duration_used": false,
+    "visibility_used": false,
+    "channel_scaling": "weighted mean and population standard deviation over train observations and time; constant scale=1",
+    "architecture": "Conv1d(7,16,5,pad2),ReLU,Conv1d(16,16,5,pad2),ReLU,AdaptiveAvgPool1d(4),Flatten,Linear(64,3)",
+    "temporal_scope": "local adjacency plus four coarse ordered temporal pooling bins",
+    "epochs": 120,
+    "learning_rate": 0.01,
+    "weight_decay": 0.001,
+    "ensemble_seeds": [
+      0,
+      1,
+      2
+    ],
+    "ensemble_recipe": "mean of three member probabilities; not logits or votes",
+    "selection": "only balanced false/true; no validation/test early stopping",
+    "shuffle_recipe": "seed1729 plus stable physical_id hash, one permutation shared by all camera observations of the physical repetition",
+    "device": "CPU, one thread, deterministic algorithms"
+  }
+}

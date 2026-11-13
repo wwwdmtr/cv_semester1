@@ -1,0 +1,172 @@
+[
+  {
+    "path": "docs/experiment-protocol.md",
+    "bytes": 35238,
+    "sha256": "0f497bb8931b0d01f023d9df5cf1d61dd4e6b6ee1d88b4cd1b33be2f1ca94524"
+  },
+  {
+    "path": "requirements.txt",
+    "bytes": 80,
+    "sha256": "7219e6bcec60e899ce63733ceff5d9afdb1fe60a1a134c9c8df8e23c0372c7ce"
+  },
+  {
+    "path": "scripts/analyze_multiview_fusion.py",
+    "bytes": 13078,
+    "sha256": "ea98fc0a0f3389929df64cdfabdcd204e91f09a7c67f7096a6e1fd418975182e"
+  },
+  {
+    "path": "scripts/analyze_reliability.py",
+    "bytes": 17548,
+    "sha256": "db5ee3f3ab153a36008abda2cdbeba7007ed57bf55cec2c4bc5f3b0a1a718e02"
+  },
+  {
+    "path": "scripts/analyze_view_consistency.py",
+    "bytes": 13047,
+    "sha256": "dd01accf2cded5195716108218b9d09225d8e85eab44fcf8e1dea8157e0a5a2c"
+  },
+  {
+    "path": "scripts/audit_rehab26.py",
+    "bytes": 6354,
+    "sha256": "8a9ac535e27211cb1298602165d40f462db525931aebbeded38557f29310b97a"
+  },
+  {
+    "path": "scripts/build_rehab26_demo.py",
+    "bytes": 12410,
+    "sha256": "391568983fbb9cbff625b85d53dcb3e8a8a90a0aa39d6dbe257ff5324c09e0a6"
+  },
+  {
+    "path": "scripts/diagnose_rehab26_transfer.py",
+    "bytes": 7616,
+    "sha256": "6923aa1992d4819093515094705168a5fd0d2a2b69410e734cbf8dd99d4586c1"
+  },
+  {
+    "path": "scripts/download_ec3d.py",
+    "bytes": 1559,
+    "sha256": "df4fe5fcbd739d1d57636af8bf9578f841d0fe65ed3c6b41d54c8a043421752c"
+  },
+  {
+    "path": "scripts/download_rehab26.py",
+    "bytes": 11384,
+    "sha256": "4218758305272e537ca0b7a4e81f46588f9ada04fed6c72ea782549f407c1c10"
+  },
+  {
+    "path": "scripts/ec3d_baseline.py",
+    "bytes": 18325,
+    "sha256": "775859080634db9546cc9632f64bd99009aabecd8f6aee562602751f081f3a85"
+  },
+  {
+    "path": "scripts/evaluate_safe_augmentations.py",
+    "bytes": 11993,
+    "sha256": "6a84d1082870f33ad3fe1a2019834f89f074a4d1de7bfa86aaf0aabec0d902ed"
+  },
+  {
+    "path": "scripts/evaluate_view_specific_2d.py",
+    "bytes": 17308,
+    "sha256": "000c8f885ba9a89e916fd8de972c0a568479ca79f8f7c134d5e2993c25a2ae9c"
+  },
+  {
+    "path": "scripts/experiment_log.py",
+    "bytes": 18426,
+    "sha256": "2f524ae34234393723208f1ac190d1efe0fc0b33eb9909eb2d64a7cb43d4d7e9"
+  },
+  {
+    "path": "scripts/predict_rehab26.py",
+    "bytes": 2613,
+    "sha256": "b0427ccd5cf0fb0aad0980d9f813823621753de9d107b396eb657a434c3a7b69"
+  },
+  {
+    "path": "scripts/predict_squat.py",
+    "bytes": 746,
+    "sha256": "72787adea68641f5c2a169816f1e91c0fd43e42307d7666dd8caeadbb23dea2c"
+  },
+  {
+    "path": "scripts/rehab26_baseline.py",
+    "bytes": 26170,
+    "sha256": "74c8b5eb7baba5cfe478006a4f87fe7eacb81c07d83df405a2ad1d400a5ff390"
+  },
+  {
+    "path": "scripts/rehab26_data.py",
+    "bytes": 12404,
+    "sha256": "ca4464de61a8a91098122bc209657571be99eeb5e57320c774e2d7095ac8620b"
+  },
+  {
+    "path": "scripts/rehab26_features.py",
+    "bytes": 3414,
+    "sha256": "c5cd038af8e82af58c5d4de6358c5c4aa43d7b2f4b44f0fc032c83f1b7e1f2fc"
+  },
+  {
+    "path": "scripts/report_rehab26.py",
+    "bytes": 17215,
+    "sha256": "d7c8ee9cec764824a18ff30ed7f69a8f50bc119a833d016862d1f8c83e05c9fc"
+  },
+  {
+    "path": "scripts/verify_final_release.py",
+    "bytes": 10618,
+    "sha256": "b1f348729f55064af8830e54253fc6a712f690d3fef40a84a2adeb43e4e59f0b"
+  },
+  {
+    "path": "scripts/visualize_rehab26.py",
+    "bytes": 3750,
+    "sha256": "9d4c8648a64d7af8bf14cd8d35273e39468be32f8ef4a0c66d5b93be64fd6109"
+  },
+  {
+    "path": "tests/test_experiment_log.py",
+    "bytes": 7489,
+    "sha256": "17f20108c38d8abb6190fb42b9d83b189000d1fcf7f02d491b814400ccc2d06d"
+  },
+  {
+    "path": "tests/test_final_verification.py",
+    "bytes": 1300,
+    "sha256": "0a6af87d81b86ff6bd21fe415a20fc9b5d0ec4eea842f81e780d3a9abf586c88"
+  },
+  {
+    "path": "tests/test_multiview_fusion.py",
+    "bytes": 2449,
+    "sha256": "e9069055b363ed4477cd42dbb11bc83aaec2e0fcad03a6c24ca87e030bfeeb89"
+  },
+  {
+    "path": "tests/test_protocol.py",
+    "bytes": 1850,
+    "sha256": "1cebc0e47ec4f3d61cd636e81f58af0c9d3bdcf6e74eeda18a6fb3153845ed8c"
+  },
+  {
+    "path": "tests/test_rehab26_data.py",
+    "bytes": 5395,
+    "sha256": "c87368d185ff6dd7b4d3d5b95d198ec5a1b89b28d8085a7e9d82392fe764c77c"
+  },
+  {
+    "path": "tests/test_rehab26_demo.py",
+    "bytes": 1149,
+    "sha256": "45a1f3ad5ddc250e2ce68efdfb0b5b8b7b4f3cf48995579793264a70fa9729af"
+  },
+  {
+    "path": "tests/test_rehab26_evaluation.py",
+    "bytes": 3034,
+    "sha256": "b6de1e07a2dacba6a28765b067c5fa5976a5876c0399e0cb364afac9a0a54072"
+  },
+  {
+    "path": "tests/test_rehab26_features.py",
+    "bytes": 4165,
+    "sha256": "3a41b84a265670f3566db995e93d05783360bc3973c8f53320df2d981aa4882f"
+  },
+  {
+    "path": "tests/test_reliability.py",
+    "bytes": 2615,
+    "sha256": "5cb528e8eae063c4dca354ffa52f3e0bba401293fee9f241c92791fefb259fa1"
+  },
+  {
+    "path": "tests/test_safe_augmentations.py",
+    "bytes": 1348,
+    "sha256": "63bfa42dbc88b66621f2b3af3c7a0586b48224bd26fc49c267f4b9aed081c5b6"
+  },
+  {
+    "path": "tests/test_view_consistency.py",
+    "bytes": 2235,
+    "sha256": "0ad1202928b16d55ceafb05e008c6ce6d1b594a75ee6459a0781d86943830ec1"
+  },
+  {
+    "path": "tests/test_view_specific_2d.py",
+    "bytes": 1943,
+    "sha256": "22a0dfe0dc1454df20f378ad3b81fe58459d39cbf6822c501a703795acc10ba7"
+  }
+]

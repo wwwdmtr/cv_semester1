@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from experiment_log import Experiment, import_existing, require_open_report, verify
+from experiment_log import Experiment, RESEARCH_NOTES_MARKER, import_existing, metric_rows, refresh_index, require_open_report, verify
 
 
 METRICS = {"summaries": [{
@@ -19,6 +19,63 @@ METRICS = {"summaries": [{
 
 
 class ExperimentLogTests(unittest.TestCase):
+    def test_optional_requirements_are_snapshotted_and_torch_version_is_recorded(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            optional = root / "requirements-temporal.txt"
+            optional.write_text("-r requirements.txt\ntorch==2.5.1\n")
+            run = Experiment("optional_deps", "REHAB26", root=root)
+            with run.capture("prepared"):
+                pass
+            self.assertEqual((run.source_dir / optional.name).read_text(), optional.read_text())
+            self.assertIn("torch", json.loads((run.directory / "environment.json").read_text()))
+            verify(run.directory, root=root)
+
+    def test_per_method_feature_versions_survive_comparison_index(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            report = root / "reports"
+            report.mkdir()
+            summaries = [dict(METRICS["summaries"][0], method="global35", feature_version="global_v1"),
+                         dict(METRICS["summaries"][0], method="phase42", feature_version="phase_v1")]
+            (report / "metrics.json").write_text(json.dumps({"summaries": summaries}))
+            rows = metric_rows(report, "REHAB26")
+            self.assertEqual([row["feature_version"] for row in rows], ["global_v1", "phase_v1"])
+            run = root / "experiments/runs/first"
+            run.mkdir(parents=True)
+            (run / "run.json").write_text(json.dumps({
+                "run_id": "first", "label": "first", "dataset": "REHAB26", "status": "completed",
+                "reports": "reports", "feature_version": "comparison", "results": rows,
+            }))
+            refresh_index(root)
+            import csv
+            with (root / "experiments/comparison.csv").open(newline="") as stream:
+                comparison = list(csv.DictReader(stream))
+            self.assertEqual([row["feature_version"] for row in comparison], ["global_v1", "phase_v1"])
+
+    def test_refresh_index_preserves_research_notes_verbatim(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            refresh_index(root)
+            index = root / "experiments" / "README.md"
+            marker = RESEARCH_NOTES_MARKER.encode("utf-8")
+            self.assertTrue(index.read_bytes().endswith(marker + b"\n"))
+            notes = marker + "\n## Решение до опыта\r\n\nТекст | [ссылка](../docs/plan.md#цель).\n\n".encode("utf-8")
+            index.write_bytes(index.read_bytes().split(marker)[0] + notes)
+            for iteration in range(3):
+                if iteration == 1:
+                    run = root / "experiments" / "runs" / "first"
+                    run.mkdir(parents=True)
+                    (run / "run.json").write_text(json.dumps({
+                        "run_id": "first", "label": "first", "dataset": "REHAB26",
+                        "status": "prepared", "reports": "reports/first", "results": [],
+                    }), encoding="utf-8")
+                refresh_index(root)
+                content = index.read_bytes()
+                self.assertEqual(content.count(marker), 1)
+                self.assertEqual(content[content.index(marker):], notes)
+            self.assertIn("[first]", index.read_text(encoding="utf-8"))
+
     def test_identical_source_snapshot_is_stored_once(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -1,0 +1,95 @@
+{
+  "run_id": "20261114-020933_rehab26_temporal_final_two_v1_e8796231",
+  "label": "rehab26_temporal_final_two_v1",
+  "dataset": "REHAB26",
+  "hypothesis": "H17: полезен ли порядок движения CNN; H18: дополняет ли CNN геометрию в фиксированной смеси 50/50?",
+  "note": "Ровно два последних сравнения; nested LOPO; shared balanced flag; три seed до argmax; затем видеопуть.",
+  "parent_run": "20261114-010658_rehab26_phase_relative42_v1_caa50190",
+  "status": "completed",
+  "recorded_at_utc": "2026-11-13T23:09:33.125644+00:00",
+  "started_at_utc": "2026-11-13T23:09:33.125648+00:00",
+  "imported_existing_results": false,
+  "reports": "experiments/runs/20261114-020933_rehab26_temporal_final_two_v1_e8796231/reports",
+  "models": "models/experiments/20261114-020933_rehab26_temporal_final_two_v1_e8796231",
+  "evidence": "exploratory",
+  "results": [
+    {
+      "dataset": "REHAB26",
+      "task": "three_categories",
+      "method": "global35",
+      "macro_f1": 0.6722379905811201,
+      "macro_f1_std": 0.09464176733937557,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.2108225108225108,
+      "error_recall": 0.7416337285902501,
+      "rates_aggregation": "mean_of_people",
+      "feature_version": "rehab26_global_geometry_v1"
+    },
+    {
+      "dataset": "REHAB26",
+      "task": "three_categories",
+      "method": "temporal_ordered",
+      "macro_f1": 0.6148895700042771,
+      "macro_f1_std": 0.1815822469738932,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.29997835497835496,
+      "error_recall": 0.7478260869565218,
+      "rates_aggregation": "mean_of_people",
+      "feature_version": "rehab26_temporal_geometry64_v1"
+    },
+    {
+      "dataset": "REHAB26",
+      "task": "three_categories",
+      "method": "temporal_shuffled",
+      "macro_f1": 0.5734029550602205,
+      "macro_f1_std": 0.15422549385787437,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.36318181818181816,
+      "error_recall": 0.7310935441370224,
+      "rates_aggregation": "mean_of_people",
+      "feature_version": "rehab26_temporal_geometry64_v1_shuffled_control"
+    },
+    {
+      "dataset": "REHAB26",
+      "task": "three_categories",
+      "method": "geometry_temporal_fusion",
+      "macro_f1": 0.6664338186225252,
+      "macro_f1_std": 0.16313362392411934,
+      "f1_aggregation": "mean_of_people",
+      "false_feedback_rate": 0.23722943722943715,
+      "error_recall": 0.7449275362318841,
+      "rates_aggregation": "mean_of_people",
+      "feature_version": "rehab26_global_geometry_v1+rehab26_temporal_geometry64_v1_mean50"
+    }
+  ],
+  "source_snapshot": {
+    "timing": "before_execution",
+    "git_head": "7e2701fa6fa40deaa2c7e83fe6529f905f9c851e",
+    "git_worktree_dirty": true,
+    "snapshot_id": "afe69311a91f3927bd0e4c269d1597a8d0ecf421d42a28cff96bc2f096c71c08",
+    "directory": "experiments/sources/afe69311a91f3927bd0e4c269d1597a8d0ecf421d42a28cff96bc2f096c71c08",
+    "files": 47
+  },
+  "finished_at_utc": "2026-11-13T23:26:16.306294+00:00",
+  "original_training_started_at_utc": "2026-11-13T23:09:34.341348+00:00",
+  "protocol_version": "rehab26_temporal_order_and_fixed_fusion_v1",
+  "feature_version": "comparison_geometry_temporal_v1",
+  "dataset_fingerprints": {
+    "annotations_sha256": "2b431fca60d0f722f47cb5de5844e5ff26203d6881a1cae4991cf79deb40e1e3",
+    "feature_matrix_sha256": "d8ef824c4bcf107da24aa56ca34f54229919ded9708d7c4eb12d980e1507d098",
+    "n_observations": 1164,
+    "n_physical_repetitions": 388
+  },
+  "snapshot_matches_recorded_training_scripts": {
+    "run_temporal_comparison.py": true,
+    "evaluate_temporal_comparison.py": true,
+    "rehab26_temporal.py": true,
+    "evaluate_phase_features.py": true,
+    "rehab26_baseline.py": true,
+    "rehab26_features.py": true,
+    "rehab26_data.py": true,
+    "experiment_log.py": true
+  },
+  "artifact_manifest_sha256": "ae68960fae65122f3903da03e3ed025cdc7fd1198461d692212e9e63d6cbe023",
+  "artifact_count": 93
+}

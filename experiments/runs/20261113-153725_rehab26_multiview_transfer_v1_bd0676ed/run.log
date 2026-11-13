@@ -1,0 +1,26 @@
+Журнал запуска: /Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/experiments/runs/20261113-153725_rehab26_multiview_transfer_v1_bd0676ed
+Внешний Honza; supervised: подбор на Mima, Petra, Terka, Vasil
+Внешний Honza; label_smoothing: подбор на Mima, Petra, Terka, Vasil
+Внешний Honza; distill_uniform: подбор на Mima, Petra, Terka, Vasil
+Внешний Honza; distill_global_gate: подбор на Mima, Petra, Terka, Vasil
+Внешний Honza; distill_class_view_gate: подбор на Mima, Petra, Terka, Vasil
+Внешний Mima; supervised: подбор на Honza, Petra, Terka, Vasil
+Внешний Mima; label_smoothing: подбор на Honza, Petra, Terka, Vasil
+Внешний Mima; distill_uniform: подбор на Honza, Petra, Terka, Vasil
+Внешний Mima; distill_global_gate: подбор на Honza, Petra, Terka, Vasil
+Внешний Mima; distill_class_view_gate: подбор на Honza, Petra, Terka, Vasil
+Внешний Petra; supervised: подбор на Honza, Mima, Terka, Vasil
+Внешний Petra; label_smoothing: подбор на Honza, Mima, Terka, Vasil
+Внешний Petra; distill_uniform: подбор на Honza, Mima, Terka, Vasil
+Внешний Petra; distill_global_gate: подбор на Honza, Mima, Terka, Vasil
+Внешний Petra; distill_class_view_gate: подбор на Honza, Mima, Terka, Vasil
+Внешний Terka; supervised: подбор на Honza, Mima, Petra, Vasil
+Внешний Terka; label_smoothing: подбор на Honza, Mima, Petra, Vasil
+Внешний Terka; distill_uniform: подбор на Honza, Mima, Petra, Vasil
+Внешний Terka; distill_global_gate: подбор на Honza, Mima, Petra, Vasil
+Внешний Terka; distill_class_view_gate: подбор на Honza, Mima, Petra, Vasil
+Внешний Vasil; supervised: подбор на Honza, Mima, Petra, Terka
+Внешний Vasil; label_smoothing: подбор на Honza, Mima, Petra, Terka
+Внешний Vasil; distill_uniform: подбор на Honza, Mima, Petra, Terka
+Внешний Vasil; distill_global_gate: подбор на Honza, Mima, Petra, Terka
+Внешний Vasil; distill_class_view_gate: подбор на Honza, Mima, Petra, Terka

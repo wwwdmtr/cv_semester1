@@ -1,0 +1,65 @@
+Журнал запуска: /Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/experiments/runs/20261114-020241_rehab26_temporal_final_two_v1_2051f12f
+Внешний Honza; global35: подбор на Mima, Petra, Terka, Vasil
+  Honza; global35; logreg_C0.1_unweighted; validation Mima: 0.02 с
+  Honza; global35; logreg_C0.1_unweighted; validation Petra: 0.00 с
+  Honza; global35; logreg_C0.1_unweighted; validation Terka: 0.00 с
+  Honza; global35; logreg_C0.1_unweighted; validation Vasil: 0.00 с
+  Honza; global35; logreg_C0.1_balanced; validation Mima: 0.00 с
+  Honza; global35; logreg_C0.1_balanced; validation Petra: 0.00 с
+  Honza; global35; logreg_C0.1_balanced; validation Terka: 0.00 с
+  Honza; global35; logreg_C0.1_balanced; validation Vasil: 0.00 с
+  Honza; global35; logreg_C1_unweighted; validation Mima: 0.01 с
+  Honza; global35; logreg_C1_unweighted; validation Petra: 0.01 с
+  Honza; global35; logreg_C1_unweighted; validation Terka: 0.01 с
+  Honza; global35; logreg_C1_unweighted; validation Vasil: 0.01 с
+  Honza; global35; logreg_C1_balanced; validation Mima: 0.01 с
+  Honza; global35; logreg_C1_balanced; validation Petra: 0.01 с
+  Honza; global35; logreg_C1_balanced; validation Terka: 0.01 с
+  Honza; global35; logreg_C1_balanced; validation Vasil: 0.01 с
+  Honza; global35; logreg_C10_unweighted; validation Mima: 0.01 с
+  Honza; global35; logreg_C10_unweighted; validation Petra: 0.01 с
+  Honza; global35; logreg_C10_unweighted; validation Terka: 0.01 с
+  Honza; global35; logreg_C10_unweighted; validation Vasil: 0.01 с
+  Honza; global35; logreg_C10_balanced; validation Mima: 0.01 с
+  Honza; global35; logreg_C10_balanced; validation Petra: 0.01 с
+  Honza; global35; logreg_C10_balanced; validation Terka: 0.01 с
+  Honza; global35; logreg_C10_balanced; validation Vasil: 0.01 с
+Внешний Honza; temporal_ordered: подбор на Mima, Petra, Terka, Vasil
+  Honza; temporal_ordered; temporal_cnn_unweighted; validation Mima: 24.39 с
+  Honza; temporal_ordered; temporal_cnn_unweighted; validation Petra: 21.97 с
+  Honza; temporal_ordered; temporal_cnn_unweighted; validation Terka: 21.47 с
+  Honza; temporal_ordered; temporal_cnn_unweighted; validation Vasil: 21.12 с
+  Honza; temporal_ordered; temporal_cnn_balanced; validation Mima: 21.13 с
+  Honza; temporal_ordered; temporal_cnn_balanced; validation Petra: 21.22 с
+  Honza; temporal_ordered; temporal_cnn_balanced; validation Terka: 21.72 с
+  Honza; temporal_ordered; temporal_cnn_balanced; validation Vasil: 21.11 с
+Внешний Honza; temporal_shuffled: подбор на Mima, Petra, Terka, Vasil
+  Honza; temporal_shuffled; temporal_cnn_unweighted; validation Mima: 20.88 с
+Traceback (most recent call last):
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/scripts/experiment_log.py", line 195, in capture
+    yield self
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/scripts/run_temporal_comparison.py", line 191, in main
+    run(records, x35, y, experiment.report_dir, experiment.models_dir, feature_metadata, dataset_metadata)
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/scripts/evaluate_temporal_comparison.py", line 265, in run
+    entry["searches"][method] = inner_search(
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/scripts/evaluate_temporal_comparison.py", line 168, in inner_search
+    else temporal.fit_temporal(x[train], y[train], weights, spec))
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/scripts/rehab26_temporal.py", line 238, in fit_temporal
+    return TemporalClassifier(spec).fit(x, y, weights)
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/scripts/rehab26_temporal.py", line 195, in fit
+    loss = (nn.functional.cross_entropy(model(features), targets, reduction="none")
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/.venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/.venv/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 375, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/.venv/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 370, in _conv_forward
+    return F.conv1d(
+KeyboardInterrupt

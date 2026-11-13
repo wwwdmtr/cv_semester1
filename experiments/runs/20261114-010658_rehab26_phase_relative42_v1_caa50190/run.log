@@ -1,0 +1,11 @@
+Журнал запуска: /Users/wrdmtrr/Documents/Studies/магистратура/1 сем/CV/CV git/cv_semester1/experiments/runs/20261114-010658_rehab26_phase_relative42_v1_caa50190
+Внешний Honza; global35: подбор только на Mima, Petra, Terka, Vasil
+Внешний Honza; phase_relative42: подбор только на Mima, Petra, Terka, Vasil
+Внешний Mima; global35: подбор только на Honza, Petra, Terka, Vasil
+Внешний Mima; phase_relative42: подбор только на Honza, Petra, Terka, Vasil
+Внешний Petra; global35: подбор только на Honza, Mima, Terka, Vasil
+Внешний Petra; phase_relative42: подбор только на Honza, Mima, Terka, Vasil
+Внешний Terka; global35: подбор только на Honza, Mima, Petra, Vasil
+Внешний Terka; phase_relative42: подбор только на Honza, Mima, Petra, Vasil
+Внешний Vasil; global35: подбор только на Honza, Mima, Petra, Terka
+Внешний Vasil; phase_relative42: подбор только на Honza, Mima, Petra, Terka

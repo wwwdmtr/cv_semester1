@@ -1,0 +1,27 @@
+{
+  "run_id": "20261113-145935_rehab26_transfer_diagnostics_2260541b",
+  "label": "rehab26_transfer_diagnostics",
+  "dataset": "REHAB26",
+  "hypothesis": "Описательная проверка наличия различающей информации в других камерах, особенно для коленей внутрь.",
+  "note": "Не обучение и не независимое подтверждение. Нельзя считать выбор камеры по истинной метке рабочим методом.",
+  "parent_run": "20261105-223447_rehab26_global_geometry_v1_b8d0914e",
+  "status": "completed",
+  "recorded_at_utc": "2026-11-13T11:59:35.825761+00:00",
+  "started_at_utc": "2026-11-13T11:59:35.825764+00:00",
+  "imported_existing_results": false,
+  "reports": "reports/rehab26_transfer_diagnostics_2026-11-13",
+  "models": "models/experiments/20261113-145935_rehab26_transfer_diagnostics_2260541b",
+  "evidence": "exploratory",
+  "results": [],
+  "source_snapshot": {
+    "timing": "before_execution",
+    "git_head": "7e2701fa6fa40deaa2c7e83fe6529f905f9c851e",
+    "git_worktree_dirty": true,
+    "snapshot_id": "e24415b34cb2601463f35c0fb12661507f98d09d56bc6bebea6a900470c6a082",
+    "directory": "experiments/sources/e24415b34cb2601463f35c0fb12661507f98d09d56bc6bebea6a900470c6a082",
+    "files": 34
+  },
+  "finished_at_utc": "2026-11-13T11:59:36.152270+00:00",
+  "artifact_manifest_sha256": "160d09c8f701a40d88165b07f9d9947f3e64b7382290a40829f1d209ff101e1b",
+  "artifact_count": 39
+}

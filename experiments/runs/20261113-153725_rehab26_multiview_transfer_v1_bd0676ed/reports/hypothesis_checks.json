@@ -1,0 +1,45 @@
+{
+  "criterion_frozen_in": "protocol_before_run.md",
+  "conditional_minus_uniform": {
+    "false_feedback_rate": -0.03145021645021648,
+    "error_recall": -0.02384716732542813,
+    "macro_f1": 0.003153856296108981,
+    "people_with_lower_false_feedback": 4
+  },
+  "criteria": {
+    "false_feedback_reduced_at_least_3pp": true,
+    "error_recall_loss_at_most_2pp": false,
+    "macro_f1_not_reduced": true,
+    "false_feedback_reduced_in_at_least_3_people": true
+  },
+  "h1_practical_criterion_met": false,
+  "conditional_minus_controls": {
+    "supervised": {
+      "macro_f1_mean": -0.035241600584511645,
+      "false_feedback_rate_mean": -0.07268398268398271,
+      "error_recall_mean": -0.11277997364953851
+    },
+    "label_smoothing": {
+      "macro_f1_mean": 0.023911317400385657,
+      "false_feedback_rate_mean": 0.03270562770562768,
+      "error_recall_mean": 0.08300395256917004
+    },
+    "distill_uniform": {
+      "macro_f1_mean": 0.003153856296108981,
+      "false_feedback_rate_mean": -0.03145021645021648,
+      "error_recall_mean": -0.02384716732542813
+    },
+    "distill_global_gate": {
+      "macro_f1_mean": -0.013207315016041221,
+      "false_feedback_rate_mean": -0.054502164502164524,
+      "error_recall_mean": -0.07259552042160722
+    }
+  },
+  "evidence": "exploratory; no population significance claim; all five participants previously inspected",
+  "supervised_vs_historical_selected": {
+    "historical_file_sha256": "94391a1e49e973fa3d4a62226fd728e8e2f7e7e5846967b4163f68f26eb8d79a",
+    "same_observation_keys": true,
+    "observations": 1164,
+    "changed_classes": 0
+  }
+}

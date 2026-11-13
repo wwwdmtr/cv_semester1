@@ -1,0 +1,50 @@
+{
+  "run_id": "20261114-020241_rehab26_temporal_final_two_v1_2051f12f",
+  "label": "rehab26_temporal_final_two_v1",
+  "dataset": "REHAB26",
+  "hypothesis": "H17: полезен ли порядок движения CNN; H18: дополняет ли CNN геометрию в фиксированной смеси 50/50?",
+  "note": "Ровно два последних сравнения; nested LOPO; shared balanced flag; три seed до argmax; затем видеопуть.",
+  "parent_run": "20261114-010658_rehab26_phase_relative42_v1_caa50190",
+  "status": "interrupted",
+  "recorded_at_utc": "2026-11-13T23:02:41.000911+00:00",
+  "started_at_utc": "2026-11-13T23:02:41.000915+00:00",
+  "imported_existing_results": false,
+  "reports": "experiments/runs/20261114-020241_rehab26_temporal_final_two_v1_2051f12f/reports",
+  "models": "models/experiments/20261114-020241_rehab26_temporal_final_two_v1_2051f12f",
+  "evidence": "exploratory",
+  "results": [],
+  "source_snapshot": {
+    "timing": "before_execution",
+    "git_head": "7e2701fa6fa40deaa2c7e83fe6529f905f9c851e",
+    "git_worktree_dirty": true,
+    "snapshot_id": "0bb185b2564b38961478c7511a6f61e49c54c1eacd7cc1194539fdff087e37b0",
+    "directory": "experiments/sources/0bb185b2564b38961478c7511a6f61e49c54c1eacd7cc1194539fdff087e37b0",
+    "files": 47
+  },
+  "error": {
+    "type": "KeyboardInterrupt",
+    "message": ""
+  },
+  "finished_at_utc": "2026-11-13T23:06:04.151466+00:00",
+  "original_training_started_at_utc": "2026-11-13T23:02:42.388760+00:00",
+  "protocol_version": "rehab26_temporal_order_and_fixed_fusion_v1",
+  "feature_version": "comparison_geometry_temporal_v1",
+  "dataset_fingerprints": {
+    "annotations_sha256": "2b431fca60d0f722f47cb5de5844e5ff26203d6881a1cae4991cf79deb40e1e3",
+    "feature_matrix_sha256": "d8ef824c4bcf107da24aa56ca34f54229919ded9708d7c4eb12d980e1507d098",
+    "n_observations": 1164,
+    "n_physical_repetitions": 388
+  },
+  "snapshot_matches_recorded_training_scripts": {
+    "run_temporal_comparison.py": true,
+    "evaluate_temporal_comparison.py": true,
+    "rehab26_temporal.py": true,
+    "evaluate_phase_features.py": true,
+    "rehab26_baseline.py": true,
+    "rehab26_features.py": true,
+    "rehab26_data.py": true,
+    "experiment_log.py": true
+  },
+  "artifact_manifest_sha256": "cb4b90e876a6be878041310fa2c4f35c0932b1c6e8e9e7d014b297b8eda063c0",
+  "artifact_count": 65
+}

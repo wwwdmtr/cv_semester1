@@ -1,0 +1,1292 @@
+{
+  "source": "https://zenodo.org/records/23018128",
+  "dimensions": "3d",
+  "expected_source_counts": {
+    "physical_squats": 554,
+    "people": 5,
+    "selected_physical_repetitions": 388,
+    "selected_camera_observations": 1164
+  },
+  "frame_interval_convention": "0-based; first_frame and last_frame included",
+  "boundary_visual_verification": false,
+  "boundary_note": "Включение last_frame зафиксировано для загрузчика; точная семантика концов без RGB-визуализации не подтверждена.",
+  "physical_key": [
+    "video_id",
+    "first_frame",
+    "last_frame"
+  ],
+  "source_physical_squats": 554,
+  "source_people": [
+    "Honza",
+    "Mima",
+    "Petra",
+    "Terka",
+    "Vasil"
+  ],
+  "selected_physical_repetitions_before_file_checks": 388,
+  "selected_physical_repetitions": 388,
+  "selected_camera_observations": 1164,
+  "physical_repetition_camera_support": {
+    "3": 388
+  },
+  "selected_observations_by_person": {
+    "Honza": 231,
+    "Mima": 234,
+    "Petra": 231,
+    "Terka": 231,
+    "Vasil": 237
+  },
+  "selected_observations_by_label": {
+    "correct": 828,
+    "knees_inward": 168,
+    "shallow_squat": 168
+  },
+  "excluded_other_error_physical_repetitions": 166,
+  "other_error_annotations": [
+    {
+      "physical_id": "ex6_Honza:636-756",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:930-1059",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:1078-1226",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:2260-2372",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:2517-2628",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:2652-2782",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:3709-3819",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:3968-4090",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:4137-4263",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:5234-5331",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:5467-5583",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:5604-5712",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:6698-6814",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:6955-7071",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:7098-7206",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:8149-8241",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:8367-8468",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:8527-8620",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:9626-9726",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:9874-9981",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:10020-10129",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:11316-11439",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:11581-11694",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:11748-11858",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:13147-13250",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:13374-13456",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:13522-13618",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:14734-14833",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:14991-15092",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:15127-15237",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Honza:16372-16485",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Honza:16647-16744",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Honza:16795-16933",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:451-525",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:650-728",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:747-829",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:1560-1624",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:1726-1808",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:1825-1908",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:2593-2664",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:2779-2860",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:2882-2979",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:3729-3794",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:3888-3960",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:3981-4058",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:4726-4795",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:4880-4952",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:4964-5048",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:5757-5816",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:5917-5978",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:5994-6074",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:6756-6818",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:6894-6961",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:6973-7040",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:8245-8307",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:8460-8524",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:8554-8637",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:9370-9430",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:9526-9597",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:9630-9698",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:11508-11570",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:11682-11752",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:11774-11884",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Mima:14716-14779",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Mima:14860-14932",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Mima:14943-15028",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:582-666",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:784-872",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:898-991",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:2065-2162",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:2272-2364",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:2386-2479",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:3349-3441",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:3549-3655",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:3681-3763",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:4656-4736",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:4842-4920",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:4942-5062",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:5932-6020",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:6148-6229",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:6256-6361",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:7257-7350",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:7461-7551",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:7578-7671",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:9487-9564",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:9682-9766",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:9794-9882",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:10717-10806",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:10917-11004",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:11029-11119",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:12022-12106",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:12220-12302",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:12325-12500",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:13386-13474",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:13573-13659",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:13682-13778",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Petra:14718-14803",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Petra:14925-15018",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Petra:15050-15148",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:415-510",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:657-751",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:764-843",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:1564-1657",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:1758-1830",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:1839-1902",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:2631-2712",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:2829-2882",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:2898-2958",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:3625-3698",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:3784-3850",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:3860-3932",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:4849-4921",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:5037-5096",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:5120-5192",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:6056-6128",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:6218-6279",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:6288-6379",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:7168-7240",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:7323-7383",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:7394-7454",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:8163-8247",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:8338-8403",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:8413-8476",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:9218-9300",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:9390-9448",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:9465-9531",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:10227-10296",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:10411-10466",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:10489-10562",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Terka:11421-11493",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Terka:11606-11671",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Terka:11682-11743",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:699-783",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:958-1058",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:1083-1161",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:1776-1842",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:2203-2296",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:2354-2428",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:3052-3127",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:3259-3330",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:3396-3462",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:3500-3560",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:4117-4185",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:4293-4360",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:4377-4437",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:4978-5047",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:5190-5253",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:5299-5360",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:6208-6280",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:6376-6432",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:6457-6512",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:6981-7041",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:7117-7177",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:7212-7268",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:7718-7774",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:7846-7899",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:7923-7971",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:9344-9400",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:9477-9523",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:9544-9589",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:10009-10065",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:10128-10186",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:10200-10248",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    },
+    {
+      "physical_id": "ex6_Vasil:10712-10764",
+      "reason": "unsupported_error",
+      "code": "ERR_TORSO_TO_SIDE"
+    },
+    {
+      "physical_id": "ex6_Vasil:10821-10867",
+      "reason": "unsupported_error",
+      "code": "ERR_KNEES_FORWARD"
+    },
+    {
+      "physical_id": "ex6_Vasil:10882-10934",
+      "reason": "unsupported_error",
+      "code": "ERR_LIFTED_HEELS"
+    }
+  ],
+  "excluded_annotations": [],
+  "excluded_observations": [],
+  "all_source_annotation_interval_issues": [],
+  "selected_observations_with_zero_torso": 0,
+  "selected_zero_torso_frames": 0,
+  "files": [
+    {
+      "filename": "mediapipe/ex6/ex6_Honza_cam1_3d.npy",
+      "shape": [
+        17378,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.03832605853676796,
+      "visibility_max": 0.9999991655349731,
+      "fraction_visibility_below_half": 0.03373997774964514,
+      "key_joint_fraction_visibility_below_half": 0.013263896881114052,
+      "all_zero_frames": 0,
+      "torso_length_median": 0.48136419449972156,
+      "zero_torso_frames": 0,
+      "coincident_connected_joint_frames": {
+        "23-25": 0,
+        "25-27": 0,
+        "24-26": 0,
+        "26-28": 0,
+        "11-23": 0,
+        "12-24": 0
+      },
+      "sha256": "6aefe743682b5034199751e83434bced273efc2a6d5cd9ddae6bc9e4eeba7ffd"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Honza_cam2_3d.npy",
+      "shape": [
+        17339,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.15050482749938965,
+      "visibility_max": 0.9999995827674866,
+      "fraction_visibility_below_half": 0.003801204850861694,
+      "key_joint_fraction_visibility_below_half": 0.0,
+      "all_zero_frames": 0,
+      "torso_length_median": 0.48305150834025057,
+      "zero_torso_frames": 0,
+      "coincident_connected_joint_frames": {
+        "23-25": 0,
+        "25-27": 0,
+        "24-26": 0,
+        "26-28": 0,
+        "11-23": 0,
+        "12-24": 0
+      },
+      "sha256": "dd9f9589f0bd5fb96598371c7647f8eed6b7de6b89d73d8ddc45148dc6624cac"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Honza_cam3_3d.npy",
+      "shape": [
+        17354,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.02434452623128891,
+      "visibility_max": 0.9999993443489075,
+      "fraction_visibility_below_half": 0.043690913980184466,
+      "key_joint_fraction_visibility_below_half": 0.009968883254581076,
+      "all_zero_frames": 0,
+      "torso_length_median": 0.4784678029664841,
+      "zero_torso_frames": 0,
+      "coincident_connected_joint_frames": {
+        "23-25": 0,
+        "25-27": 0,
+        "24-26": 0,
+        "26-28": 0,
+        "11-23": 0,
+        "12-24": 0
+      },
+      "sha256": "4b87b1f6837c7c18e6ea0ffd42168d8992f318800b9d7e193724e975040a62df"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Mima_cam1_3d.npy",
+      "shape": [
+        15264,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.008207417093217373,
+      "visibility_max": 0.9999963045120239,
+      "fraction_visibility_below_half": 0.0822235721999873,
+      "key_joint_fraction_visibility_below_half": 0.029489321278825996,
+      "all_zero_frames": 0,
+      "torso_length_median": 0.48790812332353417,
+      "zero_torso_frames": 0,
+      "coincident_connected_joint_frames": {
+        "23-25": 0,
+        "25-27": 0,
+        "24-26": 0,
+        "26-28": 0,
+        "11-23": 0,
+        "12-24": 0
+      },
+      "sha256": "35e0df7178a0135851af2d142d4e1ed73c50fa7e6dbfe717c75afb892def2925"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Mima_cam2_3d.npy",
+      "shape": [
+        15287,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.01130812056362629,
+      "visibility_max": 0.9999977350234985,
+      "fraction_visibility_below_half": 0.035254752007548504,
+      "key_joint_fraction_visibility_below_half": 0.0,
+      "all_zero_frames": 0,
+      "torso_length_median": 0.49077932708298894,
+      "zero_torso_frames": 0,
+      "coincident_connected_joint_frames": {
+        "23-25": 0,
+        "25-27": 0,
+        "24-26": 0,
+        "26-28": 0,
+        "11-23": 0,
+        "12-24": 0
+      },
+      "sha256": "a755cda5fd7e856f7edb81c309c0a01fc5d8776b2bc8d691c759b814651ae4df"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Mima_cam3_3d.npy",
+      "shape": [
+        15302,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.0,
+      "visibility_max": 0.9999950528144836,
+      "fraction_visibility_below_half": 0.0633131735602001,
+      "key_joint_fraction_visibility_below_half": 0.0062491831133185205,
+      "all_zero_frames": 1,
+      "torso_length_median": 0.49118419732847046,
+      "zero_torso_frames": 1,
+      "coincident_connected_joint_frames": {
+        "23-25": 1,
+        "25-27": 1,
+        "24-26": 1,
+        "26-28": 1,
+        "11-23": 1,
+        "12-24": 1
+      },
+      "sha256": "2564e0dd30d4b60763a53416e93932d4337798f2f2c111e2e5a5de4faf387763"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Petra_cam1_3d.npy",
+      "shape": [
+        15488,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.015142805874347687,
+      "visibility_max": 0.9999983906745911,
+      "fraction_visibility_below_half": 0.05670274542950163,
+      "key_joint_fraction_visibility_below_half": 0.01272759555785124,
+      "all_zero_frames": 0,
+      "torso_length_median": 0.4809872352556419,
+      "zero_torso_frames": 0,
+      "coincident_connected_joint_frames": {
+        "23-25": 0,
+        "25-27": 0,
+        "24-26": 0,
+        "26-28": 0,
+        "11-23": 0,
+        "12-24": 0
+      },
+      "sha256": "f8c3d9e5c9455bd9017235e7b9de294dfec9fee9c12c1ee395457891a96f6636"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Petra_cam2_3d.npy",
+      "shape": [
+        15495,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.0,
+      "visibility_max": 0.9999975562095642,
+      "fraction_visibility_below_half": 0.019697458613237896,
+      "key_joint_fraction_visibility_below_half": 0.0014601484349790255,
+      "all_zero_frames": 1,
+      "torso_length_median": 0.4815073459562561,
+      "zero_torso_frames": 1,
+      "coincident_connected_joint_frames": {
+        "23-25": 1,
+        "25-27": 1,
+        "24-26": 1,
+        "26-28": 1,
+        "11-23": 1,
+        "12-24": 1
+      },
+      "sha256": "646a51b67dbb94e008045229128b5ebbeba9d03b5bc920b6be43a2f957c65041"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Petra_cam3_3d.npy",
+      "shape": [
+        15526,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.027161788195371628,
+      "visibility_max": 0.9999975562095642,
+      "fraction_visibility_below_half": 0.08260239910375167,
+      "key_joint_fraction_visibility_below_half": 0.022599188458070334,
+      "all_zero_frames": 0,
+      "torso_length_median": 0.4801854626427362,
+      "zero_torso_frames": 0,
+      "coincident_connected_joint_frames": {
+        "23-25": 0,
+        "25-27": 0,
+        "24-26": 0,
+        "26-28": 0,
+        "11-23": 0,
+        "12-24": 0
+      },
+      "sha256": "7412b04236b2fb5473eb4d311cb0ded33d9402a89b25a2e292e6391d2ab394d2"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Terka_cam1_3d.npy",
+      "shape": [
+        12243,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.0,
+      "visibility_max": 0.9999984502792358,
+      "fraction_visibility_below_half": 0.078899754714506,
+      "key_joint_fraction_visibility_below_half": 0.03125255247896757,
+      "all_zero_frames": 284,
+      "torso_length_median": 0.4712604096052037,
+      "zero_torso_frames": 284,
+      "coincident_connected_joint_frames": {
+        "23-25": 284,
+        "25-27": 284,
+        "24-26": 284,
+        "26-28": 284,
+        "11-23": 284,
+        "12-24": 284
+      },
+      "sha256": "4c3bf2be369856c5a2ce5d27922c6c445be94b3a0622b642b1d664d0d6b4d979"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Terka_cam2_3d.npy",
+      "shape": [
+        11962,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.06844810396432877,
+      "visibility_max": 0.9999982118606567,
+      "fraction_visibility_below_half": 0.01661574784798326,
+      "key_joint_fraction_visibility_below_half": 0.0,
+      "all_zero_frames": 0,
+      "torso_length_median": 0.4668303613618695,
+      "zero_torso_frames": 0,
+      "coincident_connected_joint_frames": {
+        "23-25": 0,
+        "25-27": 0,
+        "24-26": 0,
+        "26-28": 0,
+        "11-23": 0,
+        "12-24": 0
+      },
+      "sha256": "a51d3ace0632112e2ba295405585ca78e1b2495addcdaa6b15069664675c7818"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Terka_cam3_3d.npy",
+      "shape": [
+        12019,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.04421151429414749,
+      "visibility_max": 0.9999969601631165,
+      "fraction_visibility_below_half": 0.07319723568995555,
+      "key_joint_fraction_visibility_below_half": 0.01728513187453199,
+      "all_zero_frames": 0,
+      "torso_length_median": 0.4691935743992777,
+      "zero_torso_frames": 0,
+      "coincident_connected_joint_frames": {
+        "23-25": 0,
+        "25-27": 0,
+        "24-26": 0,
+        "26-28": 0,
+        "11-23": 0,
+        "12-24": 0
+      },
+      "sha256": "a9817c9b859c397e0735ef2f37dcf42bba2500038bf36324b651177f5f51185f"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Vasil_cam1_3d.npy",
+      "shape": [
+        11189,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.0,
+      "visibility_max": 0.9999997615814209,
+      "fraction_visibility_below_half": 0.15288554505642718,
+      "key_joint_fraction_visibility_below_half": 0.014053981589060684,
+      "all_zero_frames": 121,
+      "torso_length_median": 0.526413497850382,
+      "zero_torso_frames": 121,
+      "coincident_connected_joint_frames": {
+        "23-25": 121,
+        "25-27": 121,
+        "24-26": 121,
+        "26-28": 121,
+        "11-23": 121,
+        "12-24": 121
+      },
+      "sha256": "b5f140467d86edf0121ec05d62c2d6646a223e3751862977ede9ef5edd2b6b8f"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Vasil_cam2_3d.npy",
+      "shape": [
+        11133,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.0,
+      "visibility_max": 0.9999997615814209,
+      "fraction_visibility_below_half": 0.14680624624036104,
+      "key_joint_fraction_visibility_below_half": 0.012653821970717686,
+      "all_zero_frames": 140,
+      "torso_length_median": 0.5215604004480185,
+      "zero_torso_frames": 140,
+      "coincident_connected_joint_frames": {
+        "23-25": 140,
+        "25-27": 140,
+        "24-26": 140,
+        "26-28": 140,
+        "11-23": 140,
+        "12-24": 140
+      },
+      "sha256": "6e06d6e52790e5354165f1207961650facaed2345cc80628ac6c5610e95f0d31"
+    },
+    {
+      "filename": "mediapipe/ex6/ex6_Vasil_cam3_3d.npy",
+      "shape": [
+        11118,
+        33,
+        4
+      ],
+      "dtype": "float64",
+      "nonfinite_coordinates": 0,
+      "nonfinite_visibility": 0,
+      "visibility_min": 0.0,
+      "visibility_max": 0.9999997019767761,
+      "fraction_visibility_below_half": 0.17567199245558662,
+      "key_joint_fraction_visibility_below_half": 0.01527927684835402,
+      "all_zero_frames": 154,
+      "torso_length_median": 0.5244911982395024,
+      "zero_torso_frames": 154,
+      "coincident_connected_joint_frames": {
+        "23-25": 154,
+        "25-27": 154,
+        "24-26": 154,
+        "26-28": 154,
+        "11-23": 154,
+        "12-24": 154
+      },
+      "sha256": "44b4559d45390b3c346154047df99e8b50f81aa2ea1dd275918b41649e3ac035"
+    }
+  ],
+  "files_all_coordinates_finite": true,
+  "files_all_visibility_finite": true,
+  "note": "Готовые MediaPipe-наблюдения; дополнительные ошибки не превращены в отрицательные примеры. Низкая visibility не служит причиной скрытого удаления примеров."
+}

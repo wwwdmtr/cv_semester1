@@ -1,0 +1,11 @@
+{
+  "shape": [
+    1164,
+    42
+  ],
+  "dtype": "float64",
+  "feature_matrix_sha256": "5de2947b93577c76e9b6597e0a7655317bef23b227d04d6426da1f23874d7372",
+  "baseline_prefix_exact": true,
+  "feature_version": "rehab26_global_geometry_plus_phase_relative_v1",
+  "observations_excluded": 0
+}

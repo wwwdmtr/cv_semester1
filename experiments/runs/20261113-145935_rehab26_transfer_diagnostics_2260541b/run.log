@@ -1,0 +1,4 @@
+correct {"physical_repetitions": 276, "at_least_one_camera_correct": 269, "all_cameras_correct": 159, "no_camera_correct": 7, "mean_all_three_correct": 235, "unanimous_but_wrong": 4}
+knees_inward {"physical_repetitions": 56, "at_least_one_camera_correct": 45, "all_cameras_correct": 14, "no_camera_correct": 11, "mean_all_three_correct": 33, "unanimous_but_wrong": 9}
+shallow_squat {"physical_repetitions": 56, "at_least_one_camera_correct": 54, "all_cameras_correct": 37, "no_camera_correct": 2, "mean_all_three_correct": 50, "unanimous_but_wrong": 1}
+Сохранён отчёт: reports/rehab26_transfer_diagnostics_2026-11-13

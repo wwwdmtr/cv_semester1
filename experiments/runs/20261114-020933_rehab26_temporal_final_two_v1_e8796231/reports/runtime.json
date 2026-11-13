@@ -1,0 +1,23 @@
+{
+  "seconds": 1001.025974291988,
+  "outer_fit_seconds": 287.766391459023,
+  "inner_fit_seconds": 2780.399963799995,
+  "saved_fold_bundles": 20,
+  "saved_final_bundles": 0,
+  "roundtrip_verified": true,
+  "gpu_used": false,
+  "fusion_alpha": 0.5,
+  "fusion_additional_fits": 0,
+  "training_diagnostics_file": "training_diagnostics.json",
+  "temporal_ensemble_fits": 90,
+  "temporal_member_fits": 270,
+  "inner_workers": 4,
+  "inner_execution": "spawn_process_pool",
+  "feature_dimensions": {
+    "global35": 35,
+    "temporal": [
+      64,
+      7
+    ]
+  }
+}

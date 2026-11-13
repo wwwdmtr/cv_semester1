@@ -1,0 +1,2552 @@
+[
+  {
+    "method": "supervised",
+    "test_person": "Honza",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.009107249999942724,
+    "macro_f1": 0.6786365709074323,
+    "accuracy": 0.6493506493506492,
+    "false_feedback_rate": 0.4545454545454545,
+    "error_recall": 0.9545454545454543,
+    "correct_recall": 0.5454545454545454,
+    "specific_error_type_recall": 0.909090909090909,
+    "specific_remark_precision": 0.434782608695652,
+    "per_class_f1": [
+      0.6976744186046496,
+      0.4264705882352944,
+      0.9117647058823528
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        29.99999999999996,
+        24.333333333333314,
+        0.6666666666666666
+      ],
+      [
+        0.6666666666666666,
+        9.666666666666666,
+        0.6666666666666666
+      ],
+      [
+        0.3333333333333333,
+        0.3333333333333333,
+        10.333333333333334
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        90,
+        73,
+        2
+      ],
+      [
+        2,
+        29,
+        2
+      ],
+      [
+        1,
+        1,
+        31
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 24.999999999999996,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 20.99999999999999,
+      "missed_errors": 1.0,
+      "correct_error_type": 19.999999999999993,
+      "remarks": 46.0
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 75,
+      "error_executions": 66,
+      "detected_errors": 63,
+      "missed_errors": 3,
+      "correct_error_type": 60,
+      "remarks": 138
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.967741935483871,
+        "recall": 0.5454545454545436,
+        "f1": 0.6976744186046496,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.2815533980582527,
+        "recall": 0.8787878787878786,
+        "f1": 0.4264705882352944,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.8857142857142856,
+        "recall": 0.9393939393939393,
+        "f1": 0.9117647058823528,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "label_smoothing",
+    "test_person": "Honza",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.01604224999755388,
+    "macro_f1": 0.7126333715636183,
+    "accuracy": 0.7142857142857142,
+    "false_feedback_rate": 0.35151515151515145,
+    "error_recall": 0.909090909090909,
+    "correct_recall": 0.6484848484848486,
+    "specific_error_type_recall": 0.8787878787878787,
+    "specific_remark_precision": 0.4915254237288133,
+    "per_class_f1": [
+      0.7697841726618692,
+      0.4695652173913046,
+      0.8985507246376809
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        35.66666666666664,
+        18.000000000000004,
+        1.3333333333333333
+      ],
+      [
+        1.6666666666666665,
+        8.999999999999998,
+        0.3333333333333333
+      ],
+      [
+        0.3333333333333333,
+        0.3333333333333333,
+        10.333333333333334
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        107,
+        54,
+        4
+      ],
+      [
+        5,
+        27,
+        1
+      ],
+      [
+        1,
+        1,
+        31
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 19.33333333333333,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 19.999999999999993,
+      "missed_errors": 1.9999999999999998,
+      "correct_error_type": 19.33333333333333,
+      "remarks": 39.33333333333334
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 58,
+      "error_executions": 66,
+      "detected_errors": 60,
+      "missed_errors": 6,
+      "correct_error_type": 58,
+      "remarks": 118
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.9469026548672562,
+        "recall": 0.6484848484848467,
+        "f1": 0.7697841726618692,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.32926829268292707,
+        "recall": 0.8181818181818179,
+        "f1": 0.4695652173913046,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.8611111111111109,
+        "recall": 0.9393939393939393,
+        "f1": 0.8985507246376809,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_uniform",
+    "test_person": "Honza",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.015489415993215516,
+    "macro_f1": 0.6468598502303836,
+    "accuracy": 0.6017316017316017,
+    "false_feedback_rate": 0.5272727272727271,
+    "error_recall": 0.9848484848484849,
+    "correct_recall": 0.4727272727272726,
+    "specific_error_type_recall": 0.924242424242424,
+    "specific_remark_precision": 0.401315789473684,
+    "per_class_f1": [
+      0.6393442622950806,
+      0.4026845637583893,
+      0.8985507246376809
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        25.999999999999975,
+        27.999999999999968,
+        1.0
+      ],
+      [
+        0.3333333333333333,
+        10.0,
+        0.6666666666666666
+      ],
+      [
+        0.0,
+        0.6666666666666666,
+        10.333333333333334
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        78,
+        84,
+        3
+      ],
+      [
+        1,
+        30,
+        2
+      ],
+      [
+        0,
+        2,
+        31
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 28.999999999999993,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 21.666666666666664,
+      "missed_errors": 0.3333333333333333,
+      "correct_error_type": 20.333333333333325,
+      "remarks": 50.66666666666667
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 87,
+      "error_executions": 66,
+      "detected_errors": 65,
+      "missed_errors": 1,
+      "correct_error_type": 61,
+      "remarks": 152
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.9873417721518988,
+        "recall": 0.4727272727272713,
+        "f1": 0.6393442622950806,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.25862068965517243,
+        "recall": 0.909090909090909,
+        "f1": 0.4026845637583893,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.8611111111111109,
+        "recall": 0.9393939393939393,
+        "f1": 0.8985507246376809,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_global_gate",
+    "test_person": "Honza",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.01421200000186218,
+    "macro_f1": 0.6750145521163636,
+    "accuracy": 0.6406926406926406,
+    "false_feedback_rate": 0.4727272727272726,
+    "error_recall": 0.9848484848484849,
+    "correct_recall": 0.5272727272727271,
+    "specific_error_type_recall": 0.924242424242424,
+    "specific_remark_precision": 0.4265734265734265,
+    "per_class_f1": [
+      0.687747035573121,
+      0.4255319148936172,
+      0.9117647058823528
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        28.999999999999964,
+        25.33333333333331,
+        0.6666666666666666
+      ],
+      [
+        0.3333333333333333,
+        10.0,
+        0.6666666666666666
+      ],
+      [
+        0.0,
+        0.6666666666666666,
+        10.333333333333334
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        87,
+        76,
+        2
+      ],
+      [
+        1,
+        30,
+        2
+      ],
+      [
+        0,
+        2,
+        31
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 25.999999999999993,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 21.666666666666664,
+      "missed_errors": 0.3333333333333333,
+      "correct_error_type": 20.333333333333325,
+      "remarks": 47.66666666666666
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 78,
+      "error_executions": 66,
+      "detected_errors": 65,
+      "missed_errors": 1,
+      "correct_error_type": 61,
+      "remarks": 143
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.9886363636363636,
+        "recall": 0.5272727272727256,
+        "f1": 0.687747035573121,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.27777777777777796,
+        "recall": 0.909090909090909,
+        "f1": 0.4255319148936172,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.8857142857142856,
+        "recall": 0.9393939393939393,
+        "f1": 0.9117647058823528,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_class_view_gate",
+    "test_person": "Honza",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.01452929200604558,
+    "macro_f1": 0.6669520939222598,
+    "accuracy": 0.6363636363636362,
+    "false_feedback_rate": 0.4727272727272726,
+    "error_recall": 0.9696969696969698,
+    "correct_recall": 0.5272727272727271,
+    "specific_error_type_recall": 0.909090909090909,
+    "specific_remark_precision": 0.4225352112676055,
+    "per_class_f1": [
+      0.6850393700787387,
+      0.41726618705035995,
+      0.8985507246376809
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        28.999999999999964,
+        24.99999999999998,
+        1.0
+      ],
+      [
+        0.6666666666666666,
+        9.666666666666666,
+        0.6666666666666666
+      ],
+      [
+        0.0,
+        0.6666666666666666,
+        10.333333333333334
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        87,
+        75,
+        3
+      ],
+      [
+        2,
+        29,
+        2
+      ],
+      [
+        0,
+        2,
+        31
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 25.999999999999993,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 21.333333333333332,
+      "missed_errors": 0.6666666666666666,
+      "correct_error_type": 19.999999999999993,
+      "remarks": 47.33333333333333
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 78,
+      "error_executions": 66,
+      "detected_errors": 64,
+      "missed_errors": 2,
+      "correct_error_type": 60,
+      "remarks": 142
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.9775280898876405,
+        "recall": 0.5272727272727256,
+        "f1": 0.6850393700787387,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.2735849056603775,
+        "recall": 0.8787878787878786,
+        "f1": 0.41726618705035995,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.8611111111111109,
+        "recall": 0.9393939393939393,
+        "f1": 0.8985507246376809,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "supervised",
+    "test_person": "Mima",
+    "candidate": {
+      "id": "logreg_C0.1_balanced",
+      "family": "logreg",
+      "C": 0.1,
+      "balanced": true
+    },
+    "fit_seconds": 0.006729458997142501,
+    "macro_f1": 0.7823852295409178,
+    "accuracy": 0.8632478632478634,
+    "false_feedback_rate": 0.06666666666666667,
+    "error_recall": 0.7826086956521738,
+    "correct_recall": 0.9333333333333332,
+    "specific_error_type_recall": 0.6956521739130436,
+    "specific_remark_precision": 0.7384615384615385,
+    "per_class_f1": [
+      0.9221556886227541,
+      0.6249999999999997,
+      0.7999999999999997
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      12.000000000000002
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        51.33333333333342,
+        3.3333333333333335,
+        0.3333333333333333
+      ],
+      [
+        2.6666666666666665,
+        6.666666666666664,
+        1.6666666666666665
+      ],
+      [
+        2.333333333333333,
+        0.3333333333333333,
+        9.333333333333332
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        154,
+        10,
+        1
+      ],
+      [
+        8,
+        20,
+        5
+      ],
+      [
+        7,
+        1,
+        28
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 78.0,
+      "correct_executions": 55.0,
+      "false_feedback": 3.666666666666667,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 17.999999999999993,
+      "missed_errors": 4.999999999999999,
+      "correct_error_type": 15.999999999999998,
+      "remarks": 21.666666666666664
+    },
+    "counts_observations": {
+      "all": 234,
+      "correct_executions": 165,
+      "false_feedback": 11,
+      "error_executions": 69,
+      "detected_errors": 54,
+      "missed_errors": 15,
+      "correct_error_type": 48,
+      "remarks": 65
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.9112426035502954,
+        "recall": 0.933333333333333,
+        "f1": 0.9221556886227541,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.6451612903225804,
+        "recall": 0.6060606060606057,
+        "f1": 0.6249999999999997,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.8235294117647056,
+        "recall": 0.7777777777777775,
+        "f1": 0.7999999999999997,
+        "physical_weighted_support": 12.000000000000004
+      }
+    }
+  },
+  {
+    "method": "label_smoothing",
+    "test_person": "Mima",
+    "candidate": {
+      "id": "logreg_C0.1_unweighted",
+      "family": "logreg",
+      "C": 0.1,
+      "balanced": false
+    },
+    "fit_seconds": 0.010055666003609076,
+    "macro_f1": 0.5774458487595218,
+    "accuracy": 0.8076923076923077,
+    "false_feedback_rate": 0.0,
+    "error_recall": 0.3768115942028987,
+    "correct_recall": 1.0,
+    "specific_error_type_recall": 0.34782608695652184,
+    "specific_remark_precision": 0.9230769230769229,
+    "per_class_f1": [
+      0.8847184986595178,
+      0.11428571428571427,
+      0.7333333333333331
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      12.000000000000002
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        55.000000000000114,
+        0.0,
+        0.0
+      ],
+      [
+        9.666666666666666,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      [
+        4.666666666666666,
+        0.0,
+        7.33333333333333
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        165,
+        0,
+        0
+      ],
+      [
+        29,
+        2,
+        2
+      ],
+      [
+        14,
+        0,
+        22
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 78.0,
+      "correct_executions": 55.0,
+      "false_feedback": 0.0,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 8.666666666666668,
+      "missed_errors": 14.333333333333334,
+      "correct_error_type": 8.0,
+      "remarks": 8.666666666666668
+    },
+    "counts_observations": {
+      "all": 234,
+      "correct_executions": 165,
+      "false_feedback": 0,
+      "error_executions": 69,
+      "detected_errors": 26,
+      "missed_errors": 43,
+      "correct_error_type": 24,
+      "remarks": 26
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.7932692307692313,
+        "recall": 1.0,
+        "f1": 0.8847184986595178,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.060606060606060594,
+        "f1": 0.11428571428571427,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.9166666666666667,
+        "recall": 0.6111111111111107,
+        "f1": 0.7333333333333331,
+        "physical_weighted_support": 12.000000000000004
+      }
+    }
+  },
+  {
+    "method": "distill_uniform",
+    "test_person": "Mima",
+    "candidate": {
+      "id": "logreg_C0.1_unweighted",
+      "family": "logreg",
+      "C": 0.1,
+      "balanced": false
+    },
+    "fit_seconds": 0.007225375004054513,
+    "macro_f1": 0.6778658732796318,
+    "accuracy": 0.8162393162393163,
+    "false_feedback_rate": 0.048484848484848485,
+    "error_recall": 0.5362318840579713,
+    "correct_recall": 0.9515151515151514,
+    "specific_error_type_recall": 0.492753623188406,
+    "specific_remark_precision": 0.7555555555555555,
+    "per_class_f1": [
+      0.8870056497175136,
+      0.35294117647058826,
+      0.7936507936507934
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      12.000000000000002
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        52.33333333333343,
+        2.6666666666666665,
+        0.0
+      ],
+      [
+        7.33333333333333,
+        3.0,
+        0.6666666666666666
+      ],
+      [
+        3.3333333333333335,
+        0.3333333333333333,
+        8.33333333333333
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        157,
+        8,
+        0
+      ],
+      [
+        22,
+        9,
+        2
+      ],
+      [
+        10,
+        1,
+        25
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 78.0,
+      "correct_executions": 55.0,
+      "false_feedback": 2.6666666666666665,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 12.333333333333336,
+      "missed_errors": 10.666666666666666,
+      "correct_error_type": 11.333333333333334,
+      "remarks": 15.000000000000002
+    },
+    "counts_observations": {
+      "all": 234,
+      "correct_executions": 165,
+      "false_feedback": 8,
+      "error_executions": 69,
+      "detected_errors": 37,
+      "missed_errors": 32,
+      "correct_error_type": 34,
+      "remarks": 45
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.8306878306878299,
+        "recall": 0.9515151515151513,
+        "f1": 0.8870056497175136,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.5000000000000001,
+        "recall": 0.2727272727272727,
+        "f1": 0.35294117647058826,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.9259259259259258,
+        "recall": 0.694444444444444,
+        "f1": 0.7936507936507934,
+        "physical_weighted_support": 12.000000000000004
+      }
+    }
+  },
+  {
+    "method": "distill_global_gate",
+    "test_person": "Mima",
+    "candidate": {
+      "id": "logreg_C0.1_balanced",
+      "family": "logreg",
+      "C": 0.1,
+      "balanced": true
+    },
+    "fit_seconds": 0.008498459006659687,
+    "macro_f1": 0.7113763693314265,
+    "accuracy": 0.735042735042735,
+    "false_feedback_rate": 0.2909090909090909,
+    "error_recall": 0.8695652173913043,
+    "correct_recall": 0.7090909090909092,
+    "specific_error_type_recall": 0.7971014492753622,
+    "specific_remark_precision": 0.509259259259259,
+    "per_class_f1": [
+      0.804123711340205,
+      0.4770642201834864,
+      0.852941176470588
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      12.000000000000002
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        39.0,
+        16.00000000000001,
+        0.0
+      ],
+      [
+        1.3333333333333333,
+        8.666666666666664,
+        1.0
+      ],
+      [
+        1.6666666666666665,
+        0.6666666666666666,
+        9.666666666666666
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        117,
+        48,
+        0
+      ],
+      [
+        4,
+        26,
+        3
+      ],
+      [
+        5,
+        2,
+        29
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 78.0,
+      "correct_executions": 55.0,
+      "false_feedback": 15.999999999999998,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 19.999999999999993,
+      "missed_errors": 3.0,
+      "correct_error_type": 18.333333333333325,
+      "remarks": 36.00000000000001
+    },
+    "counts_observations": {
+      "all": 234,
+      "correct_executions": 165,
+      "false_feedback": 48,
+      "error_executions": 69,
+      "detected_errors": 60,
+      "missed_errors": 9,
+      "correct_error_type": 55,
+      "remarks": 108
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.928571428571428,
+        "recall": 0.7090909090909077,
+        "f1": 0.804123711340205,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.34210526315789497,
+        "recall": 0.7878787878787875,
+        "f1": 0.4770642201834864,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.9062499999999999,
+        "recall": 0.8055555555555552,
+        "f1": 0.852941176470588,
+        "physical_weighted_support": 12.000000000000004
+      }
+    }
+  },
+  {
+    "method": "distill_class_view_gate",
+    "test_person": "Mima",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.011925625003641471,
+    "macro_f1": 0.6884226884226883,
+    "accuracy": 0.8504273504273505,
+    "false_feedback_rate": 0.0,
+    "error_recall": 0.5217391304347828,
+    "correct_recall": 1.0,
+    "specific_error_type_recall": 0.492753623188406,
+    "specific_remark_precision": 0.9444444444444443,
+    "per_class_f1": [
+      0.9090909090909091,
+      0.3076923076923076,
+      0.8484848484848483
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      12.000000000000002
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        55.000000000000114,
+        0.0,
+        0.0
+      ],
+      [
+        8.33333333333333,
+        1.9999999999999998,
+        0.6666666666666666
+      ],
+      [
+        2.6666666666666665,
+        0.0,
+        9.333333333333332
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        165,
+        0,
+        0
+      ],
+      [
+        25,
+        6,
+        2
+      ],
+      [
+        8,
+        0,
+        28
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 78.0,
+      "correct_executions": 55.0,
+      "false_feedback": 0.0,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 12.000000000000002,
+      "missed_errors": 11.0,
+      "correct_error_type": 11.333333333333334,
+      "remarks": 12.000000000000002
+    },
+    "counts_observations": {
+      "all": 234,
+      "correct_executions": 165,
+      "false_feedback": 0,
+      "error_executions": 69,
+      "detected_errors": 36,
+      "missed_errors": 33,
+      "correct_error_type": 34,
+      "remarks": 36
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.8333333333333333,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.18181818181818177,
+        "f1": 0.3076923076923076,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.9333333333333332,
+        "recall": 0.7777777777777775,
+        "f1": 0.8484848484848483,
+        "physical_weighted_support": 12.000000000000004
+      }
+    }
+  },
+  {
+    "method": "supervised",
+    "test_person": "Petra",
+    "candidate": {
+      "id": "logreg_C1_balanced",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": true
+    },
+    "fit_seconds": 0.008672042000398505,
+    "macro_f1": 0.769601889338731,
+    "accuracy": 0.8181818181818182,
+    "false_feedback_rate": 0.2,
+    "error_recall": 0.8939393939393938,
+    "correct_recall": 0.7999999999999998,
+    "specific_error_type_recall": 0.8636363636363636,
+    "specific_remark_precision": 0.6195652173913043,
+    "per_class_f1": [
+      0.8684210526315782,
+      0.6153846153846149,
+      0.8249999999999997
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        44.000000000000036,
+        6.999999999999997,
+        4.0
+      ],
+      [
+        2.333333333333333,
+        7.9999999999999964,
+        0.6666666666666666
+      ],
+      [
+        0.0,
+        0.0,
+        11.000000000000002
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        132,
+        21,
+        12
+      ],
+      [
+        7,
+        24,
+        2
+      ],
+      [
+        0,
+        0,
+        33
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 11.0,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 19.66666666666666,
+      "missed_errors": 2.333333333333333,
+      "correct_error_type": 18.999999999999996,
+      "remarks": 30.666666666666664
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 33,
+      "error_executions": 66,
+      "detected_errors": 59,
+      "missed_errors": 7,
+      "correct_error_type": 57,
+      "remarks": 92
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.9496402877697838,
+        "recall": 0.799999999999999,
+        "f1": 0.8684210526315782,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.5333333333333328,
+        "recall": 0.7272727272727268,
+        "f1": 0.6153846153846149,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.7021276595744678,
+        "recall": 1.0,
+        "f1": 0.8249999999999997,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "label_smoothing",
+    "test_person": "Petra",
+    "candidate": {
+      "id": "logreg_C10_unweighted",
+      "family": "logreg",
+      "C": 10.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.030608957997174002,
+    "macro_f1": 0.7635845635845634,
+    "accuracy": 0.8744588744588746,
+    "false_feedback_rate": 0.01818181818181818,
+    "error_recall": 0.6363636363636365,
+    "correct_recall": 0.9818181818181818,
+    "specific_error_type_recall": 0.6060606060606061,
+    "specific_remark_precision": 0.8888888888888887,
+    "per_class_f1": [
+      0.9230769230769227,
+      0.4888888888888889,
+      0.8787878787878786
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        54.00000000000011,
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      [
+        6.666666666666664,
+        3.666666666666667,
+        0.6666666666666666
+      ],
+      [
+        1.3333333333333333,
+        0.0,
+        9.666666666666666
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        162,
+        1,
+        2
+      ],
+      [
+        20,
+        11,
+        2
+      ],
+      [
+        4,
+        0,
+        29
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 1.0,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 14.0,
+      "missed_errors": 8.0,
+      "correct_error_type": 13.333333333333332,
+      "remarks": 15.000000000000002
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 3,
+      "error_executions": 66,
+      "detected_errors": 42,
+      "missed_errors": 24,
+      "correct_error_type": 40,
+      "remarks": 45
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.8709677419354833,
+        "recall": 0.9818181818181817,
+        "f1": 0.9230769230769227,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.9166666666666667,
+        "recall": 0.3333333333333333,
+        "f1": 0.4888888888888889,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.8787878787878786,
+        "recall": 0.8787878787878786,
+        "f1": 0.8787878787878786,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_uniform",
+    "test_person": "Petra",
+    "candidate": {
+      "id": "logreg_C0.1_unweighted",
+      "family": "logreg",
+      "C": 0.1,
+      "balanced": false
+    },
+    "fit_seconds": 0.00669108400325058,
+    "macro_f1": 0.7253439153439153,
+    "accuracy": 0.878787878787879,
+    "false_feedback_rate": 0.006060606060606061,
+    "error_recall": 0.681818181818182,
+    "correct_recall": 0.9939393939393939,
+    "specific_error_type_recall": 0.5909090909090912,
+    "specific_remark_precision": 0.8478260869565218,
+    "per_class_f1": [
+      0.9371428571428568,
+      0.35,
+      0.8888888888888887
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        54.66666666666678,
+        0.0,
+        0.3333333333333333
+      ],
+      [
+        6.666666666666664,
+        2.333333333333333,
+        1.9999999999999998
+      ],
+      [
+        0.3333333333333333,
+        0.0,
+        10.666666666666668
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        164,
+        0,
+        1
+      ],
+      [
+        20,
+        7,
+        6
+      ],
+      [
+        1,
+        0,
+        32
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 0.3333333333333333,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 15.000000000000002,
+      "missed_errors": 6.999999999999998,
+      "correct_error_type": 13.000000000000004,
+      "remarks": 15.333333333333336
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 1,
+      "error_executions": 66,
+      "detected_errors": 45,
+      "missed_errors": 21,
+      "correct_error_type": 39,
+      "remarks": 46
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.886486486486486,
+        "recall": 0.9939393939393939,
+        "f1": 0.9371428571428568,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.2121212121212121,
+        "f1": 0.35,
+        "physical_weighted_support": 11.0
+      },
+      "2": {
+        "precision": 0.8205128205128203,
+        "recall": 0.9696969696969696,
+        "f1": 0.8888888888888887,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_global_gate",
+    "test_person": "Petra",
+    "candidate": {
+      "id": "logreg_C10_unweighted",
+      "family": "logreg",
+      "C": 10.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.02649241699691629,
+    "macro_f1": 0.7730880230880229,
+    "accuracy": 0.8658008658008659,
+    "false_feedback_rate": 0.06666666666666667,
+    "error_recall": 0.7424242424242425,
+    "correct_recall": 0.9333333333333332,
+    "specific_error_type_recall": 0.6969696969696972,
+    "specific_remark_precision": 0.766666666666667,
+    "per_class_f1": [
+      0.9166666666666663,
+      0.5714285714285713,
+      0.8311688311688309
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        51.33333333333342,
+        0.3333333333333333,
+        3.3333333333333335
+      ],
+      [
+        5.666666666666665,
+        4.666666666666666,
+        0.6666666666666666
+      ],
+      [
+        0.0,
+        0.3333333333333333,
+        10.666666666666668
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        154,
+        1,
+        10
+      ],
+      [
+        17,
+        14,
+        2
+      ],
+      [
+        0,
+        1,
+        32
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 3.666666666666667,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 16.333333333333332,
+      "missed_errors": 5.666666666666666,
+      "correct_error_type": 15.333333333333336,
+      "remarks": 19.999999999999993
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 11,
+      "error_executions": 66,
+      "detected_errors": 49,
+      "missed_errors": 17,
+      "correct_error_type": 46,
+      "remarks": 60
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.9005847953216369,
+        "recall": 0.933333333333333,
+        "f1": 0.9166666666666663,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.8750000000000001,
+        "recall": 0.42424242424242414,
+        "f1": 0.5714285714285713,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.727272727272727,
+        "recall": 0.9696969696969696,
+        "f1": 0.8311688311688309,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_class_view_gate",
+    "test_person": "Petra",
+    "candidate": {
+      "id": "logreg_C10_unweighted",
+      "family": "logreg",
+      "C": 10.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.04216829199867789,
+    "macro_f1": 0.7530853118374371,
+    "accuracy": 0.8528138528138527,
+    "false_feedback_rate": 0.07878787878787878,
+    "error_recall": 0.7272727272727273,
+    "correct_recall": 0.9212121212121213,
+    "specific_error_type_recall": 0.681818181818182,
+    "specific_remark_precision": 0.7377049180327873,
+    "per_class_f1": [
+      0.9074626865671637,
+      0.5416666666666666,
+      0.8101265822784808
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        50.66666666666675,
+        0.3333333333333333,
+        4.0
+      ],
+      [
+        5.999999999999998,
+        4.333333333333333,
+        0.6666666666666666
+      ],
+      [
+        0.0,
+        0.3333333333333333,
+        10.666666666666668
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        152,
+        1,
+        12
+      ],
+      [
+        18,
+        13,
+        2
+      ],
+      [
+        0,
+        1,
+        32
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 4.333333333333333,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 15.999999999999998,
+      "missed_errors": 5.999999999999999,
+      "correct_error_type": 15.000000000000002,
+      "remarks": 20.333333333333325
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 13,
+      "error_executions": 66,
+      "detected_errors": 48,
+      "missed_errors": 18,
+      "correct_error_type": 45,
+      "remarks": 61
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.894117647058823,
+        "recall": 0.9212121212121208,
+        "f1": 0.9074626865671637,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.8666666666666668,
+        "recall": 0.39393939393939387,
+        "f1": 0.5416666666666666,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.6956521739130431,
+        "recall": 0.9696969696969696,
+        "f1": 0.8101265822784808,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "supervised",
+    "test_person": "Terka",
+    "candidate": {
+      "id": "logreg_C0.1_balanced",
+      "family": "logreg",
+      "C": 0.1,
+      "balanced": true
+    },
+    "fit_seconds": 0.005502583000634331,
+    "macro_f1": 0.5765426170468184,
+    "accuracy": 0.6796536796536795,
+    "false_feedback_rate": 0.309090909090909,
+    "error_recall": 0.7727272727272727,
+    "correct_recall": 0.6909090909090909,
+    "specific_error_type_recall": 0.6515151515151516,
+    "specific_remark_precision": 0.4215686274509802,
+    "per_class_f1": [
+      0.7755102040816314,
+      0.2941176470588235,
+      0.6600000000000004
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        37.99999999999999,
+        8.33333333333333,
+        8.666666666666664
+      ],
+      [
+        4.999999999999999,
+        3.3333333333333335,
+        2.6666666666666665
+      ],
+      [
+        0.0,
+        0.0,
+        11.000000000000002
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        114,
+        25,
+        26
+      ],
+      [
+        15,
+        10,
+        8
+      ],
+      [
+        0,
+        0,
+        33
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 16.999999999999996,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 16.999999999999996,
+      "missed_errors": 4.999999999999999,
+      "correct_error_type": 14.333333333333334,
+      "remarks": 34.000000000000014
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 51,
+      "error_executions": 66,
+      "detected_errors": 51,
+      "missed_errors": 15,
+      "correct_error_type": 43,
+      "remarks": 102
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.8837209302325574,
+        "recall": 0.6909090909090894,
+        "f1": 0.7755102040816314,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.28571428571428564,
+        "recall": 0.303030303030303,
+        "f1": 0.2941176470588235,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.4925373134328362,
+        "recall": 1.0,
+        "f1": 0.6600000000000004,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "label_smoothing",
+    "test_person": "Terka",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.015969374995620456,
+    "macro_f1": 0.5063914723744,
+    "accuracy": 0.7445887445887446,
+    "false_feedback_rate": 0.15151515151515152,
+    "error_recall": 0.5606060606060608,
+    "correct_recall": 0.8484848484848483,
+    "specific_error_type_recall": 0.4848484848484849,
+    "specific_remark_precision": 0.5161290322580647,
+    "per_class_f1": [
+      0.8383233532934123,
+      0.0,
+      0.6808510638297874
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        46.66666666666672,
+        0.0,
+        8.33333333333333
+      ],
+      [
+        9.666666666666666,
+        0.0,
+        1.3333333333333333
+      ],
+      [
+        0.0,
+        0.3333333333333333,
+        10.666666666666668
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        140,
+        0,
+        25
+      ],
+      [
+        29,
+        0,
+        4
+      ],
+      [
+        0,
+        1,
+        32
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 8.333333333333334,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 12.333333333333336,
+      "missed_errors": 9.66666666666667,
+      "correct_error_type": 10.666666666666666,
+      "remarks": 20.666666666666657
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 25,
+      "error_executions": 66,
+      "detected_errors": 37,
+      "missed_errors": 29,
+      "correct_error_type": 32,
+      "remarks": 62
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.8284023668639044,
+        "recall": 0.8484848484848477,
+        "f1": 0.8383233532934123,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.5245901639344264,
+        "recall": 0.9696969696969696,
+        "f1": 0.6808510638297874,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_uniform",
+    "test_person": "Terka",
+    "candidate": {
+      "id": "logreg_C0.1_unweighted",
+      "family": "logreg",
+      "C": 0.1,
+      "balanced": false
+    },
+    "fit_seconds": 0.007798749997164123,
+    "macro_f1": 0.5333138820292501,
+    "accuracy": 0.7056277056277056,
+    "false_feedback_rate": 0.23636363636363641,
+    "error_recall": 0.7272727272727273,
+    "correct_recall": 0.7636363636363638,
+    "specific_error_type_recall": 0.5606060606060608,
+    "specific_remark_precision": 0.4252873563218393,
+    "per_class_f1": [
+      0.8155339805825234,
+      0.19512195121951217,
+      0.5892857142857147
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        42.00000000000002,
+        1.3333333333333333,
+        11.66666666666667
+      ],
+      [
+        5.999999999999998,
+        1.3333333333333333,
+        3.666666666666667
+      ],
+      [
+        0.0,
+        0.0,
+        11.000000000000002
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        126,
+        4,
+        35
+      ],
+      [
+        18,
+        4,
+        11
+      ],
+      [
+        0,
+        0,
+        33
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 13.000000000000004,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 15.999999999999998,
+      "missed_errors": 5.999999999999999,
+      "correct_error_type": 12.333333333333336,
+      "remarks": 28.999999999999993
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 39,
+      "error_executions": 66,
+      "detected_errors": 48,
+      "missed_errors": 18,
+      "correct_error_type": 37,
+      "remarks": 87
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.8749999999999993,
+        "recall": 0.7636363636363624,
+        "f1": 0.8155339805825234,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.5,
+        "recall": 0.12121212121212119,
+        "f1": 0.19512195121951217,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.4177215189873423,
+        "recall": 1.0,
+        "f1": 0.5892857142857147,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_global_gate",
+    "test_person": "Terka",
+    "candidate": {
+      "id": "logreg_C0.1_unweighted",
+      "family": "logreg",
+      "C": 0.1,
+      "balanced": false
+    },
+    "fit_seconds": 0.006715458002872765,
+    "macro_f1": 0.5316990701606085,
+    "accuracy": 0.7792207792207793,
+    "false_feedback_rate": 0.10909090909090907,
+    "error_recall": 0.6060606060606061,
+    "correct_recall": 0.8909090909090909,
+    "specific_error_type_recall": 0.5000000000000001,
+    "specific_remark_precision": 0.5689655172413794,
+    "per_class_f1": [
+      0.8698224852070999,
+      0.0,
+      0.7252747252747254
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        49.00000000000007,
+        0.0,
+        5.999999999999998
+      ],
+      [
+        8.666666666666664,
+        0.0,
+        2.333333333333333
+      ],
+      [
+        0.0,
+        0.0,
+        11.000000000000002
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        147,
+        0,
+        18
+      ],
+      [
+        26,
+        0,
+        7
+      ],
+      [
+        0,
+        0,
+        33
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 5.999999999999999,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 13.333333333333332,
+      "missed_errors": 8.666666666666668,
+      "correct_error_type": 11.0,
+      "remarks": 19.33333333333333
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 18,
+      "error_executions": 66,
+      "detected_errors": 40,
+      "missed_errors": 26,
+      "correct_error_type": 33,
+      "remarks": 58
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.8497109826589588,
+        "recall": 0.8909090909090903,
+        "f1": 0.8698224852070999,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.5689655172413794,
+        "recall": 1.0,
+        "f1": 0.7252747252747254,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_class_view_gate",
+    "test_person": "Terka",
+    "candidate": {
+      "id": "logreg_C0.1_unweighted",
+      "family": "logreg",
+      "C": 0.1,
+      "balanced": false
+    },
+    "fit_seconds": 0.006102082996221725,
+    "macro_f1": 0.5190040970690197,
+    "accuracy": 0.7662337662337663,
+    "false_feedback_rate": 0.12727272727272723,
+    "error_recall": 0.6212121212121213,
+    "correct_recall": 0.8727272727272727,
+    "specific_error_type_recall": 0.5000000000000001,
+    "specific_remark_precision": 0.5322580645161292,
+    "per_class_f1": [
+      0.8622754491017958,
+      0.0,
+      0.6947368421052633
+    ],
+    "per_class_support": [
+      55.0,
+      11.0,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        48.000000000000064,
+        0.0,
+        6.999999999999997
+      ],
+      [
+        8.33333333333333,
+        0.0,
+        2.6666666666666665
+      ],
+      [
+        0.0,
+        0.0,
+        11.000000000000002
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        144,
+        0,
+        21
+      ],
+      [
+        25,
+        0,
+        8
+      ],
+      [
+        0,
+        0,
+        33
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 77.0,
+      "correct_executions": 55.0,
+      "false_feedback": 6.999999999999998,
+      "error_executions": 21.999999999999996,
+      "detected_errors": 13.666666666666666,
+      "missed_errors": 8.333333333333334,
+      "correct_error_type": 11.0,
+      "remarks": 20.666666666666657
+    },
+    "counts_observations": {
+      "all": 231,
+      "correct_executions": 165,
+      "false_feedback": 21,
+      "error_executions": 66,
+      "detected_errors": 41,
+      "missed_errors": 25,
+      "correct_error_type": 33,
+      "remarks": 62
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.852071005917159,
+        "recall": 0.8727272727272721,
+        "f1": 0.8622754491017958,
+        "physical_weighted_support": 55.000000000000114
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "physical_weighted_support": 11.000000000000002
+      },
+      "2": {
+        "precision": 0.5322580645161292,
+        "recall": 1.0,
+        "f1": 0.6947368421052633,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "supervised",
+    "test_person": "Vasil",
+    "candidate": {
+      "id": "logreg_C10_unweighted",
+      "family": "logreg",
+      "C": 10.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.01248558299994329,
+    "macro_f1": 0.5540236460717011,
+    "accuracy": 0.7721518987341771,
+    "false_feedback_rate": 0.023809523809523808,
+    "error_recall": 0.30434782608695654,
+    "correct_recall": 0.9761904761904762,
+    "specific_error_type_recall": 0.27536231884057977,
+    "specific_remark_precision": 0.7599999999999998,
+    "per_class_f1": [
+      0.8631578947368426,
+      0.17391304347826084,
+      0.6249999999999999
+    ],
+    "per_class_support": [
+      56.0,
+      12.000000000000002,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        54.66666666666678,
+        1.3333333333333333,
+        0.0
+      ],
+      [
+        10.666666666666668,
+        1.3333333333333333,
+        0.0
+      ],
+      [
+        5.333333333333332,
+        0.6666666666666666,
+        4.999999999999999
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        164,
+        4,
+        0
+      ],
+      [
+        32,
+        4,
+        0
+      ],
+      [
+        16,
+        2,
+        15
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 79.0,
+      "correct_executions": 56.0,
+      "false_feedback": 1.3333333333333333,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 6.999999999999998,
+      "missed_errors": 15.999999999999998,
+      "correct_error_type": 6.333333333333332,
+      "remarks": 8.333333333333334
+    },
+    "counts_observations": {
+      "all": 237,
+      "correct_executions": 168,
+      "false_feedback": 4,
+      "error_executions": 69,
+      "detected_errors": 21,
+      "missed_errors": 48,
+      "correct_error_type": 19,
+      "remarks": 25
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.7735849056603781,
+        "recall": 0.976190476190476,
+        "f1": 0.8631578947368426,
+        "physical_weighted_support": 56.00000000000012
+      },
+      "1": {
+        "precision": 0.4,
+        "recall": 0.11111111111111108,
+        "f1": 0.17391304347826084,
+        "physical_weighted_support": 12.000000000000004
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 0.45454545454545436,
+        "f1": 0.6249999999999999,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "label_smoothing",
+    "test_person": "Vasil",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.016664708004100248,
+    "macro_f1": 0.5053701066990105,
+    "accuracy": 0.7721518987341772,
+    "false_feedback_rate": 0.005952380952380952,
+    "error_recall": 0.24637681159420294,
+    "correct_recall": 0.9940476190476188,
+    "specific_error_type_recall": 0.23188405797101455,
+    "specific_remark_precision": 0.888888888888889,
+    "per_class_f1": [
+      0.8630490956072359,
+      0.0,
+      0.6530612244897956
+    ],
+    "per_class_support": [
+      56.0,
+      12.000000000000002,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        55.666666666666785,
+        0.3333333333333333,
+        0.0
+      ],
+      [
+        12.000000000000004,
+        0.0,
+        0.0
+      ],
+      [
+        5.333333333333332,
+        0.3333333333333333,
+        5.333333333333332
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        167,
+        1,
+        0
+      ],
+      [
+        36,
+        0,
+        0
+      ],
+      [
+        16,
+        1,
+        16
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 79.0,
+      "correct_executions": 56.0,
+      "false_feedback": 0.3333333333333333,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 5.666666666666666,
+      "missed_errors": 17.33333333333333,
+      "correct_error_type": 5.333333333333333,
+      "remarks": 5.999999999999999
+    },
+    "counts_observations": {
+      "all": 237,
+      "correct_executions": 168,
+      "false_feedback": 1,
+      "error_executions": 69,
+      "detected_errors": 17,
+      "missed_errors": 52,
+      "correct_error_type": 16,
+      "remarks": 18
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.7625570776255719,
+        "recall": 0.9940476190476191,
+        "f1": 0.8630490956072359,
+        "physical_weighted_support": 56.00000000000012
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "physical_weighted_support": 12.000000000000004
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 0.48484848484848464,
+        "f1": 0.6530612244897956,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_uniform",
+    "test_person": "Vasil",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.014492291993519757,
+    "macro_f1": 0.5858291476193164,
+    "accuracy": 0.7805907172995781,
+    "false_feedback_rate": 0.02976190476190476,
+    "error_recall": 0.3333333333333333,
+    "correct_recall": 0.9702380952380951,
+    "specific_error_type_recall": 0.31884057971014496,
+    "specific_remark_precision": 0.7857142857142853,
+    "per_class_f1": [
+      0.8647214854111408,
+      0.21276595744680843,
+      0.6799999999999998
+    ],
+    "per_class_support": [
+      56.0,
+      12.000000000000002,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        54.33333333333344,
+        1.6666666666666665,
+        0.0
+      ],
+      [
+        10.333333333333334,
+        1.6666666666666665,
+        0.0
+      ],
+      [
+        4.999999999999999,
+        0.3333333333333333,
+        5.666666666666665
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        163,
+        5,
+        0
+      ],
+      [
+        31,
+        5,
+        0
+      ],
+      [
+        15,
+        1,
+        17
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 79.0,
+      "correct_executions": 56.0,
+      "false_feedback": 1.6666666666666665,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 7.666666666666664,
+      "missed_errors": 15.333333333333336,
+      "correct_error_type": 7.333333333333331,
+      "remarks": 9.333333333333336
+    },
+    "counts_observations": {
+      "all": 237,
+      "correct_executions": 168,
+      "false_feedback": 5,
+      "error_executions": 69,
+      "detected_errors": 23,
+      "missed_errors": 46,
+      "correct_error_type": 22,
+      "remarks": 28
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.7799043062200962,
+        "recall": 0.9702380952380951,
+        "f1": 0.8647214854111408,
+        "physical_weighted_support": 56.00000000000012
+      },
+      "1": {
+        "precision": 0.4545454545454545,
+        "recall": 0.13888888888888884,
+        "f1": 0.21276595744680843,
+        "physical_weighted_support": 12.000000000000004
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 0.5151515151515149,
+        "f1": 0.6799999999999998,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_global_gate",
+    "test_person": "Vasil",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.014727708999998868,
+    "macro_f1": 0.5598405103668262,
+    "accuracy": 0.7763713080168777,
+    "false_feedback_rate": 0.023809523809523808,
+    "error_recall": 0.30434782608695654,
+    "correct_recall": 0.9761904761904762,
+    "specific_error_type_recall": 0.2898550724637681,
+    "specific_remark_precision": 0.7999999999999997,
+    "per_class_f1": [
+      0.8631578947368426,
+      0.13636363636363633,
+      0.6799999999999998
+    ],
+    "per_class_support": [
+      56.0,
+      12.000000000000002,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        54.66666666666678,
+        1.3333333333333333,
+        0.0
+      ],
+      [
+        11.000000000000002,
+        1.0,
+        0.0
+      ],
+      [
+        4.999999999999999,
+        0.3333333333333333,
+        5.666666666666665
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        164,
+        4,
+        0
+      ],
+      [
+        33,
+        3,
+        0
+      ],
+      [
+        15,
+        1,
+        17
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 79.0,
+      "correct_executions": 56.0,
+      "false_feedback": 1.3333333333333333,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 6.999999999999998,
+      "missed_errors": 15.999999999999998,
+      "correct_error_type": 6.666666666666665,
+      "remarks": 8.333333333333334
+    },
+    "counts_observations": {
+      "all": 237,
+      "correct_executions": 168,
+      "false_feedback": 4,
+      "error_executions": 69,
+      "detected_errors": 21,
+      "missed_errors": 48,
+      "correct_error_type": 20,
+      "remarks": 25
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.7735849056603781,
+        "recall": 0.976190476190476,
+        "f1": 0.8631578947368426,
+        "physical_weighted_support": 56.00000000000012
+      },
+      "1": {
+        "precision": 0.375,
+        "recall": 0.08333333333333331,
+        "f1": 0.13636363636363633,
+        "physical_weighted_support": 12.000000000000004
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 0.5151515151515149,
+        "f1": 0.6799999999999998,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  },
+  {
+    "method": "distill_class_view_gate",
+    "test_person": "Vasil",
+    "candidate": {
+      "id": "logreg_C1_unweighted",
+      "family": "logreg",
+      "C": 1.0,
+      "balanced": false
+    },
+    "fit_seconds": 0.013759125002252404,
+    "macro_f1": 0.5575177587316373,
+    "accuracy": 0.7848101265822784,
+    "false_feedback_rate": 0.011904761904761904,
+    "error_recall": 0.30434782608695654,
+    "correct_recall": 0.988095238095238,
+    "specific_error_type_recall": 0.2898550724637681,
+    "specific_remark_precision": 0.8695652173913044,
+    "per_class_f1": [
+      0.8691099476439796,
+      0.09756097560975607,
+      0.7058823529411763
+    ],
+    "per_class_support": [
+      56.0,
+      12.000000000000002,
+      11.0
+    ],
+    "confusion_matrix_repeat_weighted": [
+      [
+        55.33333333333345,
+        0.6666666666666666,
+        0.0
+      ],
+      [
+        11.333333333333336,
+        0.6666666666666666,
+        0.0
+      ],
+      [
+        4.666666666666666,
+        0.3333333333333333,
+        5.999999999999998
+      ]
+    ],
+    "confusion_matrix_observations": [
+      [
+        166,
+        2,
+        0
+      ],
+      [
+        34,
+        2,
+        0
+      ],
+      [
+        14,
+        1,
+        18
+      ]
+    ],
+    "counts_repeat_weighted": {
+      "all": 79.0,
+      "correct_executions": 56.0,
+      "false_feedback": 0.6666666666666666,
+      "error_executions": 22.999999999999993,
+      "detected_errors": 6.999999999999998,
+      "missed_errors": 15.999999999999998,
+      "correct_error_type": 6.666666666666665,
+      "remarks": 7.666666666666664
+    },
+    "counts_observations": {
+      "all": 237,
+      "correct_executions": 168,
+      "false_feedback": 2,
+      "error_executions": 69,
+      "detected_errors": 21,
+      "missed_errors": 48,
+      "correct_error_type": 20,
+      "remarks": 23
+    },
+    "per_class": {
+      "0": {
+        "precision": 0.7757009345794401,
+        "recall": 0.988095238095238,
+        "f1": 0.8691099476439796,
+        "physical_weighted_support": 56.00000000000012
+      },
+      "1": {
+        "precision": 0.4,
+        "recall": 0.05555555555555554,
+        "f1": 0.09756097560975607,
+        "physical_weighted_support": 12.000000000000004
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 0.5454545454545452,
+        "f1": 0.7058823529411763,
+        "physical_weighted_support": 11.000000000000002
+      }
+    }
+  }
+]

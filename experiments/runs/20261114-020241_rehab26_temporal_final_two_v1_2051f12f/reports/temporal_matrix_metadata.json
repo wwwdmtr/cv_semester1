@@ -1,0 +1,17 @@
+{
+  "shape": [
+    1164,
+    64,
+    7
+  ],
+  "dtype": "float64",
+  "ordered_sha256": "2606e738845d78a6ae31ab0301b8551e9dcee50a348ef0a2c03da36134f2c4f3",
+  "shuffled_sha256": "5530882cd4fa8647283180acce58d91dc15a2053d284ae8d87346358399e579d",
+  "identical_sorted_values_per_channel": true,
+  "observations_excluded": 0,
+  "shuffle_seed": 1729,
+  "shuffle_key": "physical_id",
+  "same_permutation_for_synchronized_cameras": true,
+  "same_permutation_across_channels": true,
+  "feature_version": "rehab26_temporal_geometry64_v1"
+}

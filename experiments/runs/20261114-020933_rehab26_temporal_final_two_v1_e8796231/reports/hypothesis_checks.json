@@ -1,0 +1,74 @@
+{
+  "evidence": "exploratory; five previously inspected people; no significance claim",
+  "further_model_search_stopped": true,
+  "H17": {
+    "candidate": "temporal_ordered",
+    "vs_baseline": {
+      "reference": "global35",
+      "changes": {
+        "macro_f1_mean": -0.05734842057684297,
+        "false_feedback_rate_mean": 0.08915584415584416,
+        "error_recall_mean": 0.006192358366271633,
+        "specific_error_type_recall_mean": -0.03623188405797084
+      },
+      "people_with_higher_macro_f1": 2
+    },
+    "vs_secondary": {
+      "reference": "temporal_shuffled",
+      "changes": {
+        "macro_f1_mean": 0.04148661494405659,
+        "false_feedback_rate_mean": -0.0632034632034632,
+        "error_recall_mean": 0.01673254281949932,
+        "specific_error_type_recall_mean": -0.01080368906455842
+      },
+      "people_with_higher_macro_f1": 3
+    },
+    "criteria": {
+      "macro_f1_gain_at_least_0_02": false,
+      "false_feedback_increase_at_most_2pp": false,
+      "error_recall_loss_at_most_2pp": true,
+      "macro_f1_improved_for_at_least_3_people": false,
+      "secondary_macro_f1_gain_at_least_0_01": true,
+      "secondary_macro_f1_improved_for_at_least_3_people": true
+    },
+    "practical_criterion_met": false
+  },
+  "H18": {
+    "candidate": "geometry_temporal_fusion",
+    "vs_baseline": {
+      "reference": "global35",
+      "changes": {
+        "macro_f1_mean": -0.00580417195859495,
+        "false_feedback_rate_mean": 0.02640692640692635,
+        "error_recall_mean": 0.0032938076416340056,
+        "specific_error_type_recall_mean": -0.01528326745718045
+      },
+      "people_with_higher_macro_f1": 2
+    },
+    "vs_secondary": {
+      "reference": "temporal_ordered",
+      "changes": {
+        "macro_f1_mean": 0.05154424861824802,
+        "false_feedback_rate_mean": -0.0627489177489178,
+        "error_recall_mean": -0.0028985507246376274,
+        "specific_error_type_recall_mean": 0.020948616600790393
+      },
+      "people_with_higher_macro_f1": 5
+    },
+    "criteria": {
+      "macro_f1_gain_at_least_0_02": false,
+      "false_feedback_increase_at_most_2pp": false,
+      "error_recall_loss_at_most_2pp": true,
+      "macro_f1_improved_for_at_least_3_people": false,
+      "secondary_macro_f1_gain_at_least_0_01": true,
+      "secondary_macro_f1_improved_for_at_least_3_people": true
+    },
+    "practical_criterion_met": false
+  },
+  "baseline_reproduction": {
+    "historical_file_sha256": "94391a1e49e973fa3d4a62226fd728e8e2f7e7e5846967b4163f68f26eb8d79a",
+    "same_observation_keys": true,
+    "observations": 1164,
+    "changed_classes": 0
+  }
+}

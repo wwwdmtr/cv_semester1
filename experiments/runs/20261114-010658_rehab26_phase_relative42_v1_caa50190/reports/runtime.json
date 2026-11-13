@@ -1,0 +1,11 @@
+{
+  "seconds": 4.237189292005496,
+  "saved_fold_bundles": 10,
+  "saved_final_bundles": 0,
+  "roundtrip_verified": true,
+  "gpu_used": false,
+  "feature_dimensions": {
+    "global35": 35,
+    "phase_relative42": 42
+  }
+}
