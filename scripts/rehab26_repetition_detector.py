@@ -32,6 +32,7 @@ class RepetitionDetectorConfig:
     min_peak_compression: float = 0.06
     max_calibration_knee_range_deg: float = 8.0
     max_calibration_distance_range: float = 0.05
+    min_standing_knee_angle_deg: float = 150.0
 
     def validate(self) -> None:
         positive = {
@@ -57,6 +58,8 @@ class RepetitionDetectorConfig:
             raise ValueError("invalid_detector_config: min_repetition_seconds должен быть меньше max")
         if self.max_calibration_knee_range_deg <= 0 or self.max_calibration_distance_range <= 0:
             raise ValueError("invalid_detector_config: допуски калибровки должны быть > 0")
+        if not 0 < self.min_standing_knee_angle_deg < 180:
+            raise ValueError("invalid_detector_config: угол стойки должен быть в (0, 180)")
 
 
 @dataclass(frozen=True)
@@ -77,6 +80,7 @@ class RepetitionDetectionResult:
     rejected_candidates: tuple[dict[str, Any], ...]
     baseline_knee_angle_deg: float
     baseline_hip_to_ankle_distance: float
+    calibration_start_frame: int
     calibration_frames: int
     smoothing_frames: int
     transition_frames: int
@@ -89,6 +93,7 @@ class RepetitionDetectionResult:
             "baseline": {
                 "knee_angle_deg": self.baseline_knee_angle_deg,
                 "hip_to_ankle_distance_in_torso_lengths": self.baseline_hip_to_ankle_distance,
+                "start_frame": self.calibration_start_frame,
                 "calibration_frames": self.calibration_frames,
             },
             "smoothing_frames": self.smoothing_frames,
@@ -111,11 +116,55 @@ def _smooth(values: np.ndarray, window: int) -> np.ndarray:
     return np.convolve(padded, kernel, mode="valid")
 
 
+def find_stable_stance_start_from_signals(
+    knee_angle_radians: np.ndarray,
+    hip_to_ankle_distance: np.ndarray,
+    fps: float,
+    config: RepetitionDetectorConfig | None = None,
+) -> int:
+    """Найти первую устойчивую почти выпрямленную стойку для калибровки.
+
+    Проверка абсолютного угла колена не оценивает глубину приседания. Она не
+    позволяет принять за исходную стойку устойчивый кадр в нижней точке.
+    """
+    config = config or RepetitionDetectorConfig()
+    config.validate()
+    knee = np.asarray(knee_angle_radians, dtype=np.float64)
+    distance = np.asarray(hip_to_ankle_distance, dtype=np.float64)
+    if knee.ndim != 1 or distance.ndim != 1 or len(knee) != len(distance):
+        raise ValueError("invalid_signal_shape: ожидаются два одномерных сигнала одинаковой длины")
+    if not np.isfinite(fps) or fps <= 0:
+        raise ValueError("invalid_fps: fps должен быть положительным")
+    if not np.isfinite(knee).all() or not np.isfinite(distance).all():
+        raise ValueError("nonfinite_signals: перед поиском стойки нужно обработать пропуски позы")
+
+    calibration_frames = _frames(config.calibration_seconds, fps, minimum=3)
+    if len(knee) <= calibration_frames + 2:
+        raise ValueError("video_too_short: недостаточно кадров для поиска стойки")
+    smoothing_frames = _frames(config.smoothing_seconds, fps)
+    knee_smooth = _smooth(knee, smoothing_frames)
+    distance_smooth = _smooth(distance, smoothing_frames)
+    for start in range(0, len(knee) - calibration_frames + 1):
+        stop = start + calibration_frames
+        knee_window = knee_smooth[start:stop]
+        distance_window = distance_smooth[start:stop]
+        if float(np.rad2deg(np.median(knee_window))) < config.min_standing_knee_angle_deg:
+            continue
+        if float(np.rad2deg(np.ptp(knee_window))) > config.max_calibration_knee_range_deg:
+            continue
+        if float(np.ptp(distance_window)) > config.max_calibration_distance_range:
+            continue
+        return start
+    raise ValueError("stable_stance_not_found: не найдена устойчивая стойка с почти прямыми коленями")
+
+
 def detect_repetitions_from_signals(
     knee_angle_radians: np.ndarray,
     hip_to_ankle_distance: np.ndarray,
     fps: float,
     config: RepetitionDetectorConfig | None = None,
+    *,
+    calibration_start_frame: int = 0,
 ) -> RepetitionDetectionResult:
     """Выделить повторения по сгибанию коленей и сжатию вертикальной геометрии."""
     config = config or RepetitionDetectorConfig()
@@ -130,15 +179,18 @@ def detect_repetitions_from_signals(
         raise ValueError("nonfinite_signals: перед сегментацией нужно обработать пропуски позы")
 
     calibration_frames = _frames(config.calibration_seconds, fps, minimum=3)
-    if len(knee) <= calibration_frames + 2:
+    if calibration_start_frame < 0:
+        raise ValueError("invalid_calibration_start: номер кадра должен быть >= 0")
+    calibration_end = calibration_start_frame + calibration_frames
+    if len(knee) <= calibration_end + 2:
         raise ValueError("video_too_short: недостаточно кадров после начальной калибровки")
     smoothing_frames = _frames(config.smoothing_seconds, fps)
     transition_frames = _frames(config.transition_seconds, fps)
     knee_smooth = _smooth(knee, smoothing_frames)
     distance_smooth = _smooth(distance, smoothing_frames)
 
-    calibration_knee = knee_smooth[:calibration_frames]
-    calibration_distance = distance_smooth[:calibration_frames]
+    calibration_knee = knee_smooth[calibration_start_frame:calibration_end]
+    calibration_distance = distance_smooth[calibration_start_frame:calibration_end]
     knee_range_deg = float(np.rad2deg(np.ptp(calibration_knee)))
     distance_range = float(np.ptp(calibration_distance))
     if knee_range_deg > config.max_calibration_knee_range_deg:
@@ -176,7 +228,7 @@ def detect_repetitions_from_signals(
     return_run = 0
     active_start: int | None = None
 
-    for frame in range(calibration_frames, len(knee)):
+    for frame in range(calibration_end, len(knee)):
         if state == "standing":
             start_run = start_run + 1 if start_condition[frame] else 0
             if start_run >= transition_frames:
@@ -237,7 +289,7 @@ def detect_repetitions_from_signals(
             })
         else:
             repetitions.append(DetectedRepetition(
-                start_frame=max(calibration_frames, active_start - pre_roll),
+                start_frame=max(calibration_end, active_start - pre_roll),
                 end_frame=min(len(knee) - 1, return_frame + post_roll),
                 bottom_frame=bottom_frame,
                 active_start_frame=active_start,
@@ -263,6 +315,7 @@ def detect_repetitions_from_signals(
         rejected_candidates=tuple(rejected),
         baseline_knee_angle_deg=float(np.rad2deg(baseline_knee)),
         baseline_hip_to_ankle_distance=baseline_distance,
+        calibration_start_frame=calibration_start_frame,
         calibration_frames=calibration_frames,
         smoothing_frames=smoothing_frames,
         transition_frames=transition_frames,
@@ -274,9 +327,25 @@ def detect_repetitions(
     poses: np.ndarray,
     fps: float,
     config: RepetitionDetectorConfig | None = None,
+    *,
+    search_stable_stance: bool = False,
 ) -> RepetitionDetectionResult:
     """Извлечь два наблюдаемых сигнала из world-поз и сегментировать повторы."""
     signals = extract_signals(poses)
     mean_knee_angle = np.mean(signals[:, :2], axis=1)
     hip_to_ankle_distance = signals[:, 6]
-    return detect_repetitions_from_signals(mean_knee_angle, hip_to_ankle_distance, fps, config)
+    calibration_start = 0
+    if search_stable_stance:
+        calibration_start = find_stable_stance_start_from_signals(
+            mean_knee_angle,
+            hip_to_ankle_distance,
+            fps,
+            config,
+        )
+    return detect_repetitions_from_signals(
+        mean_knee_angle,
+        hip_to_ankle_distance,
+        fps,
+        config,
+        calibration_start_frame=calibration_start,
+    )
