@@ -17,6 +17,11 @@ from rehab26_video import (
     world_landmarks_to_array,
 )
 import predict_rehab26_video as video_cli
+from rehab26_repetition_detector import (
+    DetectedRepetition,
+    RepetitionDetectionResult,
+    RepetitionDetectorConfig,
+)
 
 
 class FakeLandmark:
@@ -108,6 +113,67 @@ class Rehab26VideoTests(unittest.TestCase):
             self.assertEqual(metadata["status"], "classifier_missing")
             self.assertTrue((output / "repetition_world_poses.npy").is_file())
             self.assertIn("не переобучает", metadata["technical_rejection_reason"])
+
+    def test_automatic_mode_saves_each_repetition_and_summary(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            video = root / "clip.mp4"
+            pose_model = root / "pose.task"
+            classifier = root / "squat_geometry.joblib"
+            output = root / "output"
+            video.write_bytes(b"test-video")
+            pose_model.write_bytes(b"test-pose-model")
+            classifier.write_bytes(b"trusted-test-model")
+            extracted = VideoPoseResult(
+                poses=valid_pose_sequence(20),
+                detected=np.ones(20, dtype=bool),
+                fps=20.0,
+                width=640,
+                height=480,
+                frame_count=20,
+                mediapipe_version="test",
+                opencv_version="test",
+            )
+            repetition = DetectedRepetition(
+                start_frame=4,
+                end_frame=14,
+                bottom_frame=9,
+                active_start_frame=5,
+                return_frame=13,
+                duration_seconds=.45,
+                peak_knee_flexion_deg=55.0,
+                peak_compression=.2,
+            )
+            detection = RepetitionDetectionResult(
+                repetitions=(repetition,),
+                rejected_candidates=(),
+                baseline_knee_angle_deg=175.0,
+                baseline_hip_to_ankle_distance=1.5,
+                calibration_start_frame=1,
+                calibration_frames=3,
+                smoothing_frames=2,
+                transition_frames=2,
+                config=RepetitionDetectorConfig(),
+            )
+            argv = [
+                "predict_rehab26_video.py", str(video),
+                "--pose-model", str(pose_model),
+                "--model", str(classifier),
+                "--output-dir", str(output),
+                "--automatic-repetitions",
+            ]
+            predicted = {"predicted_class": 0, "category": "correct", "score": .8}
+            with patch.object(video_cli, "extract_world_poses", return_value=extracted), \
+                    patch.object(video_cli, "detect_repetitions", return_value=detection), \
+                    patch.object(video_cli, "predict", return_value=predicted), \
+                    patch.object(sys, "argv", argv):
+                video_cli.main()
+            metadata = json.loads((output / "metadata.json").read_text(encoding="utf-8"))
+            self.assertEqual(metadata["status"], "completed")
+            self.assertEqual(metadata["result"]["complete_repetitions"], 1)
+            self.assertEqual(metadata["repetitions"][0]["result"]["category"], "correct")
+            self.assertTrue((output / "repetition_001_world_poses.npy").is_file())
+            self.assertTrue((output / "repetition_001_result.json").is_file())
 
 
 if __name__ == "__main__":

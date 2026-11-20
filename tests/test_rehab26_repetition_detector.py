@@ -11,6 +11,7 @@ from rehab26_repetition_detector import (
     RepetitionDetectorConfig,
     detect_repetitions,
     detect_repetitions_from_signals,
+    find_stable_stance_start_from_signals,
 )
 
 
@@ -106,6 +107,28 @@ class RepetitionDetectorTests(unittest.TestCase):
         knee[:15] -= np.deg2rad(np.linspace(0, 20, 15))
         with self.assertRaisesRegex(ValueError, "unstable_calibration_knee"):
             detect_repetitions_from_signals(knee, distance, FPS)
+
+    def test_search_skips_stable_bottom_and_finds_first_standing_window(self):
+        knee, distance, _ = signals_with_repetitions([60])
+        bottom_frames = 18
+        knee = np.concatenate([np.deg2rad(np.full(bottom_frames, 90.0)), knee])
+        distance = np.concatenate([np.full(bottom_frames, 1.10), distance])
+        start = find_stable_stance_start_from_signals(knee, distance, FPS)
+        self.assertGreaterEqual(start, bottom_frames - 2)
+        result = detect_repetitions_from_signals(
+            knee,
+            distance,
+            FPS,
+            calibration_start_frame=start,
+        )
+        self.assertEqual(len(result.repetitions), 1)
+        self.assertEqual(result.calibration_start_frame, start)
+
+    def test_search_reports_when_no_standing_pose_exists(self):
+        knee = np.deg2rad(np.full(60, 90.0))
+        distance = np.full(60, 1.1)
+        with self.assertRaisesRegex(ValueError, "stable_stance_not_found"):
+            find_stable_stance_start_from_signals(knee, distance, FPS)
 
     def test_invalid_threshold_order_is_rejected(self):
         knee, distance, _ = signals_with_repetitions([60])
